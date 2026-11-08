@@ -58,9 +58,12 @@ Colab-ready notebook is also included so the run can be repeated on a T4.
 │   ├── llamaboard_train.py            # Phase 3 drives LLaMA Board's Train tab (Playwright)
 │   ├── llamaboard_chat.py             # Phase 3 loads the adapter in LLaMA Board's Chat tab
 │   ├── phase4_loss_curve.py           # Phase 4 loss curve + convergence check
+│   ├── router_inference.py            # course baseline (A–G) + classify(), shared by 5–6
+│   ├── phase5_merge_and_smoke.py      # Phase 5 baseline → merge → smoke test
 │   └── viz_style.py                   # one chart style for all figures
 ├── configs/                           # LLaMA Board training args          (Phase 3)
 ├── adapters/                          # trained LoRA adapter               (Phase 3)
+├── models.nosync/                     # merged 3.4 GB model, local only    (Phase 5, gitignored)
 ├── results/                           # metrics, plots, logs               (Phases 1–6)
 ├── docs/                              # write-ups per phase
 ├── demo/                              # narrated demo video                (Phase 7)
@@ -86,7 +89,7 @@ PEFT 0.18.1 · Accelerate 1.11.0 · Gradio 5.50.0 · Python 3.11.
 - [x] **Phase 2: Prepare dataset:** stratified split, ShareGPT JSON, `dataset_info.json` → [notes](docs/PHASE2_DATASET.md)
 - [x] **Phase 3: Fine-tune via LLaMA Board:** LoRA on Qwen3-1.7B-Base, 90 steps, loss 7.16 → 0.19 in 69 min → [notes](docs/PHASE3_TRAINING.md)
 - [x] **Phase 4: Review training:** loss curve falls 97 % and is flat in epoch 3 → no retrain → [notes](docs/PHASE4_TRAINING_REVIEW.md)
-- [ ] **Phase 5: Merge + smoke test:** baseline, merged model, `classify()`
+- [x] **Phase 5: Merge + smoke test:** baseline 24.8 %, adapter merged (verified), course smoke test 4/5 → [notes](docs/PHASE5_MERGE_SMOKE.md)
 - [ ] **Phase 6: Evaluate + compare:** report, confusion matrix, baseline vs fine-tuned
 - [ ] **Phase 7: Demo video**
 

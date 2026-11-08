@@ -1,0 +1,79 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Device: mps  dtype: torch.float16
+Base model loaded in 3.9 s
+Baseline prompt example:
+System: You are an IT helpdesk ticket routing assistant. Classify the ticket by responding with ONLY a single letter — nothing else:
+A) Support general
+B) Fileservice
+C) O365
+D) EOL
+E) Software
+F) Active Directory
+G) Computer-Services<|endoftext|>
+Human: Support Ticket: <ticket text><|endoftext|>
+Assistant:
+
+=== Baseline (no fine-tuning) ===
+                   precision    recall  f1-score   support
+
+  Support general      0.248     0.933     0.392        30
+      Fileservice      0.000     0.000     0.000        28
+             O365      0.000     0.000     0.000        18
+              EOL      1.000     0.083     0.154        12
+         Software      0.000     0.000     0.000        12
+ Active Directory      0.000     0.000     0.000         9
+Computer-Services      0.000     0.000     0.000         8
+
+         accuracy                          0.248       117
+        macro avg      0.178     0.145     0.078       117
+     weighted avg      0.166     0.248     0.116       117
+
+Attaching LoRA adapter...
+Merging ...
+merge check: {'seconds': 0.6, 'max_abs_logit_diff_adapter_vs_merged': 0.0469, 'same_top1_token': True}
+Writing model shards:   0%|          | 0/1 [00:00<?, ?it/s]Writing model shards: 100%|██████████| 1/1 [00:02<00:00,  2.50s/it]Writing model shards: 100%|██████████| 1/1 [00:02<00:00,  2.50s/it]
+Saved -> /Users/senthilkumarpackiyam/Documents/GEN_ACADEMY/week5/models.nosync/qwen3-1.7b-support-router-merged (3.45 GB)
+
+Ticket (truncated)                                           Expected             Predicted              Conf
+----------------------------------------------------------------------------------------------------------------
+Please create a new user account for the new employee star   Active Directory     Support general       80.8%  --
+I cannot access the shared network folder — I keep getting   Fileservice          Fileservice           62.3%  OK
+Outlook keeps asking me to re-enter my password and Teams    O365                 O365                  77.7%  OK
+We're ready to retire [SERVER] — please remove it from mon   EOL                  EOL                   96.0%  OK
+Adobe Acrobat fails to install, error code 1603.             Software             Software              92.2%  OK
+Hi, the printer on the 2nd floor needs a new driver instal   Computer-Services    Computer-Services     46.1%  OK
+Could you please create a Light (external) user account fo   Support general      Support general       59.4%  OK
+
+Course smoke test: 4/5 correct
+{
+  "device": "mps",
+  "dtype": "torch.float16",
+  "load_base_s": 3.9,
+  "baseline_seconds": 27.4,
+  "baseline": {
+    "accuracy": 0.2479,
+    "macro_f1": 0.0779,
+    "predicted_label_counts": {
+      "Support general": 113,
+      "O365": 2,
+      "EOL": 1,
+      "Fileservice": 1
+    }
+  },
+  "adapter_load": {
+    "tensors_in_file": 392,
+    "lora_tensors_in_model": 392,
+    "unexpected_keys": 0
+  },
+  "merge": {
+    "seconds": 0.6,
+    "max_abs_logit_diff_adapter_vs_merged": 0.0469,
+    "same_top1_token": true
+  },
+  "merged_model": {
+    "path": "models.nosync/qwen3-1.7b-support-router-merged",
+    "size_gb": 3.45,
+    "save_seconds": 2.6
+  },
+  "smoke_course_correct": "4/5"
+}

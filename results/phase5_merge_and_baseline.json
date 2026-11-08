@@ -1,0 +1,32 @@
+{
+  "device": "mps",
+  "dtype": "torch.float16",
+  "load_base_s": 3.9,
+  "baseline_seconds": 27.4,
+  "baseline": {
+    "accuracy": 0.2479,
+    "macro_f1": 0.0779,
+    "predicted_label_counts": {
+      "Support general": 113,
+      "O365": 2,
+      "EOL": 1,
+      "Fileservice": 1
+    }
+  },
+  "adapter_load": {
+    "tensors_in_file": 392,
+    "lora_tensors_in_model": 392,
+    "unexpected_keys": 0
+  },
+  "merge": {
+    "seconds": 0.6,
+    "max_abs_logit_diff_adapter_vs_merged": 0.0469,
+    "same_top1_token": true
+  },
+  "merged_model": {
+    "path": "models.nosync/qwen3-1.7b-support-router-merged",
+    "size_gb": 3.45,
+    "save_seconds": 2.6
+  },
+  "smoke_course_correct": "4/5"
+}

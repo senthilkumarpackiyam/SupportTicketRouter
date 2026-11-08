@@ -1,0 +1,79 @@
+[
+  {
+    "group": "course",
+    "ticket": "Please create a new user account for the new employee starting Monday.",
+    "expected": "Active Directory",
+    "predicted": "Support general",
+    "raw_generation": "Support general",
+    "confidence": 0.8081,
+    "ok": false,
+    "latency_ms": 249.5,
+    "baseline_predicted": "Support general"
+  },
+  {
+    "group": "course",
+    "ticket": "I cannot access the shared network folder — I keep getting Access Denied.",
+    "expected": "Fileservice",
+    "predicted": "Fileservice",
+    "raw_generation": "Fileservice",
+    "confidence": 0.6232,
+    "ok": true,
+    "latency_ms": 246.4,
+    "baseline_predicted": "Support general"
+  },
+  {
+    "group": "course",
+    "ticket": "Outlook keeps asking me to re-enter my password and Teams won't sync.",
+    "expected": "O365",
+    "predicted": "O365",
+    "raw_generation": "O365",
+    "confidence": 0.7765,
+    "ok": true,
+    "latency_ms": 343.8,
+    "baseline_predicted": "Support general"
+  },
+  {
+    "group": "course",
+    "ticket": "We're ready to retire [SERVER] — please remove it from monitoring.",
+    "expected": "EOL",
+    "predicted": "EOL",
+    "raw_generation": "EOL",
+    "confidence": 0.9597,
+    "ok": true,
+    "latency_ms": 245.9,
+    "baseline_predicted": "EOL"
+  },
+  {
+    "group": "course",
+    "ticket": "Adobe Acrobat fails to install, error code 1603.",
+    "expected": "Software",
+    "predicted": "Software",
+    "raw_generation": "Software",
+    "confidence": 0.9217,
+    "ok": true,
+    "latency_ms": 196.8,
+    "baseline_predicted": "Software"
+  },
+  {
+    "group": "extra",
+    "ticket": "Hi, the printer on the 2nd floor needs a new driver installed on my machine. Could someone set it up?",
+    "expected": "Computer-Services",
+    "predicted": "Computer-Services",
+    "raw_generation": "Computer-Services",
+    "confidence": 0.4605,
+    "ok": true,
+    "latency_ms": 317.5,
+    "baseline_predicted": "Support general"
+  },
+  {
+    "group": "extra",
+    "ticket": "Could you please create a Light (external) user account for a contractor? They only need basic email access.",
+    "expected": "Support general",
+    "predicted": "Support general",
+    "raw_generation": "Support general",
+    "confidence": 0.594,
+    "ok": true,
+    "latency_ms": 266.3,
+    "baseline_predicted": "Support general"
+  }
+]
