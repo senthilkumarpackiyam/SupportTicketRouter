@@ -1,0 +1,1147 @@
+Visit http://ip:port for Web UI, e.g., http://127.0.0.1:7860
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[INFO|configuration_utils.py:780] 2026-11-09 00:24:24,754 >> loading configuration file config.json from cache at /Users/senthilkumarpackiyam/.cache/huggingface/hub/models--Qwen--Qwen3-1.7B-Base/snapshots/ea980cb0a6c2ae4b936e82123acc929f1cec04c1/config.json
+[INFO|configuration_utils.py:856] 2026-11-09 00:24:24,762 >> Model config Qwen3Config {
+  "architectures": [
+    "Qwen3ForCausalLM"
+  ],
+  "attention_bias": false,
+  "attention_dropout": 0.0,
+  "bos_token_id": 151643,
+  "dtype": "bfloat16",
+  "eos_token_id": 151643,
+  "head_dim": 128,
+  "hidden_act": "silu",
+  "hidden_size": 2048,
+  "initializer_range": 0.02,
+  "intermediate_size": 6144,
+  "layer_types": [
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention"
+  ],
+  "max_position_embeddings": 32768,
+  "max_window_layers": 28,
+  "model_type": "qwen3",
+  "num_attention_heads": 16,
+  "num_hidden_layers": 28,
+  "num_key_value_heads": 8,
+  "pad_token_id": null,
+  "rms_norm_eps": 1e-06,
+  "rope_parameters": {
+    "rope_theta": 1000000,
+    "rope_type": "default"
+  },
+  "sliding_window": null,
+  "tie_word_embeddings": true,
+  "transformers_version": "5.8.0",
+  "use_cache": true,
+  "use_sliding_window": false,
+  "vocab_size": 151936
+}
+
+[INFO|configuration_utils.py:780] 2026-11-09 00:24:27,482 >> loading configuration file config.json from cache at /Users/senthilkumarpackiyam/.cache/huggingface/hub/models--Qwen--Qwen3-1.7B-Base/snapshots/ea980cb0a6c2ae4b936e82123acc929f1cec04c1/config.json
+[INFO|configuration_utils.py:856] 2026-11-09 00:24:27,484 >> Model config Qwen3Config {
+  "architectures": [
+    "Qwen3ForCausalLM"
+  ],
+  "attention_bias": false,
+  "attention_dropout": 0.0,
+  "bos_token_id": 151643,
+  "dtype": "bfloat16",
+  "eos_token_id": 151643,
+  "head_dim": 128,
+  "hidden_act": "silu",
+  "hidden_size": 2048,
+  "initializer_range": 0.02,
+  "intermediate_size": 6144,
+  "layer_types": [
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention"
+  ],
+  "max_position_embeddings": 32768,
+  "max_window_layers": 28,
+  "model_type": "qwen3",
+  "num_attention_heads": 16,
+  "num_hidden_layers": 28,
+  "num_key_value_heads": 8,
+  "pad_token_id": null,
+  "rms_norm_eps": 1e-06,
+  "rope_parameters": {
+    "rope_theta": 1000000,
+    "rope_type": "default"
+  },
+  "sliding_window": null,
+  "tie_word_embeddings": true,
+  "transformers_version": "5.8.0",
+  "use_cache": true,
+  "use_sliding_window": false,
+  "vocab_size": 151936
+}
+
+[INFO|configuration_utils.py:780] 2026-11-09 00:24:27,723 >> loading configuration file config.json from cache at /Users/senthilkumarpackiyam/.cache/huggingface/hub/models--Qwen--Qwen3-1.7B-Base/snapshots/ea980cb0a6c2ae4b936e82123acc929f1cec04c1/config.json
+[INFO|configuration_utils.py:856] 2026-11-09 00:24:27,725 >> Model config Qwen3Config {
+  "architectures": [
+    "Qwen3ForCausalLM"
+  ],
+  "attention_bias": false,
+  "attention_dropout": 0.0,
+  "bos_token_id": 151643,
+  "dtype": "bfloat16",
+  "eos_token_id": 151643,
+  "head_dim": 128,
+  "hidden_act": "silu",
+  "hidden_size": 2048,
+  "initializer_range": 0.02,
+  "intermediate_size": 6144,
+  "layer_types": [
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention"
+  ],
+  "max_position_embeddings": 32768,
+  "max_window_layers": 28,
+  "model_type": "qwen3",
+  "num_attention_heads": 16,
+  "num_hidden_layers": 28,
+  "num_key_value_heads": 8,
+  "pad_token_id": null,
+  "rms_norm_eps": 1e-06,
+  "rope_parameters": {
+    "rope_theta": 1000000,
+    "rope_type": "default"
+  },
+  "sliding_window": null,
+  "tie_word_embeddings": true,
+  "transformers_version": "5.8.0",
+  "use_cache": true,
+  "use_sliding_window": false,
+  "vocab_size": 151936
+}
+
+[INFO|configuration_utils.py:780] 2026-11-09 00:24:29,145 >> loading configuration file config.json from cache at /Users/senthilkumarpackiyam/.cache/huggingface/hub/models--Qwen--Qwen3-1.7B-Base/snapshots/ea980cb0a6c2ae4b936e82123acc929f1cec04c1/config.json
+[INFO|configuration_utils.py:856] 2026-11-09 00:24:29,148 >> Model config Qwen3Config {
+  "architectures": [
+    "Qwen3ForCausalLM"
+  ],
+  "attention_bias": false,
+  "attention_dropout": 0.0,
+  "bos_token_id": 151643,
+  "dtype": "bfloat16",
+  "eos_token_id": 151643,
+  "head_dim": 128,
+  "hidden_act": "silu",
+  "hidden_size": 2048,
+  "initializer_range": 0.02,
+  "intermediate_size": 6144,
+  "layer_types": [
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention"
+  ],
+  "max_position_embeddings": 32768,
+  "max_window_layers": 28,
+  "model_type": "qwen3",
+  "num_attention_heads": 16,
+  "num_hidden_layers": 28,
+  "num_key_value_heads": 8,
+  "pad_token_id": null,
+  "rms_norm_eps": 1e-06,
+  "rope_parameters": {
+    "rope_theta": 1000000,
+    "rope_type": "default"
+  },
+  "sliding_window": null,
+  "tie_word_embeddings": true,
+  "transformers_version": "5.8.0",
+  "use_cache": true,
+  "use_sliding_window": false,
+  "vocab_size": 151936
+}
+
+[WARNING|logging.py:340] 2026-11-09 00:24:29,148 >> `torch_dtype` is deprecated! Use `dtype` instead!
+* Running on local URL:  http://0.0.0.0:7860
+* To create a public link, set `share=True` in `launch()`.
+[INFO|2026-11-09 00:24:29] llamafactory.model.model_utils.kv_cache:144 >> KV cache is enabled for faster generation.
+[INFO|modeling_utils.py:769] 2026-11-09 00:24:29,777 >> loading weights file model.safetensors from cache at /Users/senthilkumarpackiyam/.cache/huggingface/hub/models--Qwen--Qwen3-1.7B-Base/snapshots/ea980cb0a6c2ae4b936e82123acc929f1cec04c1/model.safetensors
+[INFO|modeling_utils.py:839] 2026-11-09 00:24:29,777 >> Will use dtype=torch.bfloat16 as defined in model's config object
+[INFO|configuration_utils.py:1086] 2026-11-09 00:24:29,781 >> Generate config GenerationConfig {
+  "bos_token_id": 151643,
+  "eos_token_id": 151643,
+  "output_attentions": false,
+  "output_hidden_states": false,
+  "use_cache": true
+}
+
+Loading weights:   0%|          | 0/310 [00:00<?, ?it/s]Loading weights:   0%|          | 1/310 [00:00<01:51,  2.77it/s]Loading weights:  23%|██▎       | 70/310 [00:00<00:01, 196.77it/s]Loading weights:  44%|████▎     | 135/310 [00:00<00:00, 326.26it/s]Loading weights:  60%|██████    | 187/310 [00:00<00:00, 320.81it/s]Loading weights:  75%|███████▍  | 231/310 [00:00<00:00, 262.00it/s]Loading weights:  86%|████████▌ | 266/310 [00:01<00:00, 223.34it/s]Loading weights:  95%|█████████▌| 295/310 [00:01<00:00, 202.10it/s]Loading weights: 100%|██████████| 310/310 [00:01<00:00, 215.40it/s]
+[INFO|configuration_utils.py:1039] 2026-11-09 00:24:34,759 >> loading configuration file generation_config.json from cache at /Users/senthilkumarpackiyam/.cache/huggingface/hub/models--Qwen--Qwen3-1.7B-Base/snapshots/ea980cb0a6c2ae4b936e82123acc929f1cec04c1/generation_config.json
+[INFO|configuration_utils.py:1086] 2026-11-09 00:24:34,760 >> Generate config GenerationConfig {
+  "bos_token_id": 151643,
+  "do_sample": false,
+  "eos_token_id": 151643,
+  "max_new_tokens": 2048
+}
+
+[INFO|dynamic_module_utils.py:441] 2026-11-09 00:24:34,995 >> Could not locate the custom_generate/generate.py inside Qwen/Qwen3-1.7B-Base.
+[INFO|2026-11-09 00:24:34] llamafactory.model.model_utils.attention:144 >> Using torch SDPA for faster training and inference.
+[INFO|2026-11-09 00:24:35] llamafactory.model.adapter:144 >> Merged 1 adapter(s).
+[INFO|2026-11-09 00:24:35] llamafactory.model.adapter:144 >> Loaded adapter(s): saves/Qwen3-1.7B-Base/lora/train_2026-11-08-22-39-50
+[INFO|2026-11-09 00:24:35] llamafactory.model.loader:144 >> all params: 1,720,574,976
+[WARNING|2026-11-09 00:24:35] llamafactory.chat.hf_engine:155 >> There is no current event loop, creating a new one.
+[INFO|configuration_utils.py:780] 2026-11-09 00:28:06,879 >> loading configuration file config.json from cache at /Users/senthilkumarpackiyam/.cache/huggingface/hub/models--Qwen--Qwen3-1.7B-Base/snapshots/ea980cb0a6c2ae4b936e82123acc929f1cec04c1/config.json
+[INFO|configuration_utils.py:856] 2026-11-09 00:28:06,880 >> Model config Qwen3Config {
+  "architectures": [
+    "Qwen3ForCausalLM"
+  ],
+  "attention_bias": false,
+  "attention_dropout": 0.0,
+  "bos_token_id": 151643,
+  "dtype": "bfloat16",
+  "eos_token_id": 151643,
+  "head_dim": 128,
+  "hidden_act": "silu",
+  "hidden_size": 2048,
+  "initializer_range": 0.02,
+  "intermediate_size": 6144,
+  "layer_types": [
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention"
+  ],
+  "max_position_embeddings": 32768,
+  "max_window_layers": 28,
+  "model_type": "qwen3",
+  "num_attention_heads": 16,
+  "num_hidden_layers": 28,
+  "num_key_value_heads": 8,
+  "pad_token_id": null,
+  "rms_norm_eps": 1e-06,
+  "rope_parameters": {
+    "rope_theta": 1000000,
+    "rope_type": "default"
+  },
+  "sliding_window": null,
+  "tie_word_embeddings": true,
+  "transformers_version": "5.8.0",
+  "use_cache": true,
+  "use_sliding_window": false,
+  "vocab_size": 151936
+}
+
+[INFO|configuration_utils.py:780] 2026-11-09 00:28:09,587 >> loading configuration file config.json from cache at /Users/senthilkumarpackiyam/.cache/huggingface/hub/models--Qwen--Qwen3-1.7B-Base/snapshots/ea980cb0a6c2ae4b936e82123acc929f1cec04c1/config.json
+[INFO|configuration_utils.py:856] 2026-11-09 00:28:09,588 >> Model config Qwen3Config {
+  "architectures": [
+    "Qwen3ForCausalLM"
+  ],
+  "attention_bias": false,
+  "attention_dropout": 0.0,
+  "bos_token_id": 151643,
+  "dtype": "bfloat16",
+  "eos_token_id": 151643,
+  "head_dim": 128,
+  "hidden_act": "silu",
+  "hidden_size": 2048,
+  "initializer_range": 0.02,
+  "intermediate_size": 6144,
+  "layer_types": [
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention"
+  ],
+  "max_position_embeddings": 32768,
+  "max_window_layers": 28,
+  "model_type": "qwen3",
+  "num_attention_heads": 16,
+  "num_hidden_layers": 28,
+  "num_key_value_heads": 8,
+  "pad_token_id": null,
+  "rms_norm_eps": 1e-06,
+  "rope_parameters": {
+    "rope_theta": 1000000,
+    "rope_type": "default"
+  },
+  "sliding_window": null,
+  "tie_word_embeddings": true,
+  "transformers_version": "5.8.0",
+  "use_cache": true,
+  "use_sliding_window": false,
+  "vocab_size": 151936
+}
+
+[INFO|configuration_utils.py:780] 2026-11-09 00:28:09,831 >> loading configuration file config.json from cache at /Users/senthilkumarpackiyam/.cache/huggingface/hub/models--Qwen--Qwen3-1.7B-Base/snapshots/ea980cb0a6c2ae4b936e82123acc929f1cec04c1/config.json
+[INFO|configuration_utils.py:856] 2026-11-09 00:28:09,831 >> Model config Qwen3Config {
+  "architectures": [
+    "Qwen3ForCausalLM"
+  ],
+  "attention_bias": false,
+  "attention_dropout": 0.0,
+  "bos_token_id": 151643,
+  "dtype": "bfloat16",
+  "eos_token_id": 151643,
+  "head_dim": 128,
+  "hidden_act": "silu",
+  "hidden_size": 2048,
+  "initializer_range": 0.02,
+  "intermediate_size": 6144,
+  "layer_types": [
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention"
+  ],
+  "max_position_embeddings": 32768,
+  "max_window_layers": 28,
+  "model_type": "qwen3",
+  "num_attention_heads": 16,
+  "num_hidden_layers": 28,
+  "num_key_value_heads": 8,
+  "pad_token_id": null,
+  "rms_norm_eps": 1e-06,
+  "rope_parameters": {
+    "rope_theta": 1000000,
+    "rope_type": "default"
+  },
+  "sliding_window": null,
+  "tie_word_embeddings": true,
+  "transformers_version": "5.8.0",
+  "use_cache": true,
+  "use_sliding_window": false,
+  "vocab_size": 151936
+}
+
+[INFO|configuration_utils.py:780] 2026-11-09 00:28:11,330 >> loading configuration file config.json from cache at /Users/senthilkumarpackiyam/.cache/huggingface/hub/models--Qwen--Qwen3-1.7B-Base/snapshots/ea980cb0a6c2ae4b936e82123acc929f1cec04c1/config.json
+[INFO|configuration_utils.py:856] 2026-11-09 00:28:11,331 >> Model config Qwen3Config {
+  "architectures": [
+    "Qwen3ForCausalLM"
+  ],
+  "attention_bias": false,
+  "attention_dropout": 0.0,
+  "bos_token_id": 151643,
+  "dtype": "bfloat16",
+  "eos_token_id": 151643,
+  "head_dim": 128,
+  "hidden_act": "silu",
+  "hidden_size": 2048,
+  "initializer_range": 0.02,
+  "intermediate_size": 6144,
+  "layer_types": [
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention"
+  ],
+  "max_position_embeddings": 32768,
+  "max_window_layers": 28,
+  "model_type": "qwen3",
+  "num_attention_heads": 16,
+  "num_hidden_layers": 28,
+  "num_key_value_heads": 8,
+  "pad_token_id": null,
+  "rms_norm_eps": 1e-06,
+  "rope_parameters": {
+    "rope_theta": 1000000,
+    "rope_type": "default"
+  },
+  "sliding_window": null,
+  "tie_word_embeddings": true,
+  "transformers_version": "5.8.0",
+  "use_cache": true,
+  "use_sliding_window": false,
+  "vocab_size": 151936
+}
+
+[INFO|2026-11-09 00:28:11] llamafactory.model.model_utils.kv_cache:144 >> KV cache is enabled for faster generation.
+[INFO|modeling_utils.py:769] 2026-11-09 00:28:11,566 >> loading weights file model.safetensors from cache at /Users/senthilkumarpackiyam/.cache/huggingface/hub/models--Qwen--Qwen3-1.7B-Base/snapshots/ea980cb0a6c2ae4b936e82123acc929f1cec04c1/model.safetensors
+[INFO|modeling_utils.py:839] 2026-11-09 00:28:11,566 >> Will use dtype=torch.bfloat16 as defined in model's config object
+[INFO|configuration_utils.py:1086] 2026-11-09 00:28:11,567 >> Generate config GenerationConfig {
+  "bos_token_id": 151643,
+  "eos_token_id": 151643,
+  "output_attentions": false,
+  "output_hidden_states": false,
+  "use_cache": true
+}
+
+Loading weights:   0%|          | 0/310 [00:00<?, ?it/s]Loading weights:   0%|          | 1/310 [00:00<01:56,  2.65it/s]Loading weights:   5%|▍         | 15/310 [00:00<00:07, 38.77it/s]Loading weights:   9%|▊         | 27/310 [00:00<00:04, 59.66it/s]Loading weights:  14%|█▍        | 44/310 [00:00<00:02, 89.19it/s]Loading weights:  19%|█▊        | 58/310 [00:00<00:02, 102.58it/s]Loading weights:  23%|██▎       | 71/310 [00:00<00:02, 106.05it/s]Loading weights:  29%|██▉       | 91/310 [00:01<00:01, 126.62it/s]Loading weights:  34%|███▍      | 105/310 [00:01<00:01, 120.84it/s]Loading weights:  38%|███▊      | 118/310 [00:01<00:01, 123.22it/s]Loading weights:  42%|████▏     | 131/310 [00:01<00:01, 124.55it/s]Loading weights:  47%|████▋     | 145/310 [00:01<00:01, 126.15it/s]Loading weights:  51%|█████▏    | 159/310 [00:01<00:01, 126.53it/s]Loading weights:  56%|█████▌    | 174/310 [00:01<00:01, 129.79it/s]Loading weights:  61%|██████    | 189/310 [00:01<00:00, 131.97it/s]Loading weights:  65%|██████▌   | 203/310 [00:01<00:00, 125.26it/s]Loading weights:  71%|███████   | 219/310 [00:02<00:00, 134.43it/s]Loading weights:  75%|███████▌  | 234/310 [00:02<00:00, 134.81it/s]Loading weights:  80%|████████  | 248/310 [00:02<00:00, 129.34it/s]Loading weights:  85%|████████▌ | 265/310 [00:02<00:00, 140.52it/s]Loading weights:  90%|█████████ | 280/310 [00:02<00:00, 127.74it/s]Loading weights:  97%|█████████▋| 300/310 [00:02<00:00, 141.32it/s]Loading weights: 100%|██████████| 310/310 [00:02<00:00, 115.60it/s]
+[INFO|configuration_utils.py:1039] 2026-11-09 00:28:15,041 >> loading configuration file generation_config.json from cache at /Users/senthilkumarpackiyam/.cache/huggingface/hub/models--Qwen--Qwen3-1.7B-Base/snapshots/ea980cb0a6c2ae4b936e82123acc929f1cec04c1/generation_config.json
+[INFO|configuration_utils.py:1086] 2026-11-09 00:28:15,041 >> Generate config GenerationConfig {
+  "bos_token_id": 151643,
+  "do_sample": false,
+  "eos_token_id": 151643,
+  "max_new_tokens": 2048
+}
+
+[INFO|dynamic_module_utils.py:441] 2026-11-09 00:28:15,274 >> Could not locate the custom_generate/generate.py inside Qwen/Qwen3-1.7B-Base.
+[INFO|2026-11-09 00:28:15] llamafactory.model.model_utils.attention:144 >> Using torch SDPA for faster training and inference.
+[INFO|2026-11-09 00:28:15] llamafactory.model.adapter:144 >> Merged 1 adapter(s).
+[INFO|2026-11-09 00:28:15] llamafactory.model.adapter:144 >> Loaded adapter(s): saves/Qwen3-1.7B-Base/lora/train_2026-11-08-22-39-50
+[INFO|2026-11-09 00:28:15] llamafactory.model.loader:144 >> all params: 1,720,574,976
+[INFO|configuration_utils.py:780] 2026-11-09 00:28:34,371 >> loading configuration file config.json from cache at /Users/senthilkumarpackiyam/.cache/huggingface/hub/models--Qwen--Qwen3-1.7B-Base/snapshots/ea980cb0a6c2ae4b936e82123acc929f1cec04c1/config.json
+[INFO|configuration_utils.py:856] 2026-11-09 00:28:34,372 >> Model config Qwen3Config {
+  "architectures": [
+    "Qwen3ForCausalLM"
+  ],
+  "attention_bias": false,
+  "attention_dropout": 0.0,
+  "bos_token_id": 151643,
+  "dtype": "bfloat16",
+  "eos_token_id": 151643,
+  "head_dim": 128,
+  "hidden_act": "silu",
+  "hidden_size": 2048,
+  "initializer_range": 0.02,
+  "intermediate_size": 6144,
+  "layer_types": [
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention"
+  ],
+  "max_position_embeddings": 32768,
+  "max_window_layers": 28,
+  "model_type": "qwen3",
+  "num_attention_heads": 16,
+  "num_hidden_layers": 28,
+  "num_key_value_heads": 8,
+  "pad_token_id": null,
+  "rms_norm_eps": 1e-06,
+  "rope_parameters": {
+    "rope_theta": 1000000,
+    "rope_type": "default"
+  },
+  "sliding_window": null,
+  "tie_word_embeddings": true,
+  "transformers_version": "5.8.0",
+  "use_cache": true,
+  "use_sliding_window": false,
+  "vocab_size": 151936
+}
+
+[INFO|configuration_utils.py:780] 2026-11-09 00:28:37,158 >> loading configuration file config.json from cache at /Users/senthilkumarpackiyam/.cache/huggingface/hub/models--Qwen--Qwen3-1.7B-Base/snapshots/ea980cb0a6c2ae4b936e82123acc929f1cec04c1/config.json
+[INFO|configuration_utils.py:856] 2026-11-09 00:28:37,159 >> Model config Qwen3Config {
+  "architectures": [
+    "Qwen3ForCausalLM"
+  ],
+  "attention_bias": false,
+  "attention_dropout": 0.0,
+  "bos_token_id": 151643,
+  "dtype": "bfloat16",
+  "eos_token_id": 151643,
+  "head_dim": 128,
+  "hidden_act": "silu",
+  "hidden_size": 2048,
+  "initializer_range": 0.02,
+  "intermediate_size": 6144,
+  "layer_types": [
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention"
+  ],
+  "max_position_embeddings": 32768,
+  "max_window_layers": 28,
+  "model_type": "qwen3",
+  "num_attention_heads": 16,
+  "num_hidden_layers": 28,
+  "num_key_value_heads": 8,
+  "pad_token_id": null,
+  "rms_norm_eps": 1e-06,
+  "rope_parameters": {
+    "rope_theta": 1000000,
+    "rope_type": "default"
+  },
+  "sliding_window": null,
+  "tie_word_embeddings": true,
+  "transformers_version": "5.8.0",
+  "use_cache": true,
+  "use_sliding_window": false,
+  "vocab_size": 151936
+}
+
+[INFO|configuration_utils.py:780] 2026-11-09 00:28:37,398 >> loading configuration file config.json from cache at /Users/senthilkumarpackiyam/.cache/huggingface/hub/models--Qwen--Qwen3-1.7B-Base/snapshots/ea980cb0a6c2ae4b936e82123acc929f1cec04c1/config.json
+[INFO|configuration_utils.py:856] 2026-11-09 00:28:37,400 >> Model config Qwen3Config {
+  "architectures": [
+    "Qwen3ForCausalLM"
+  ],
+  "attention_bias": false,
+  "attention_dropout": 0.0,
+  "bos_token_id": 151643,
+  "dtype": "bfloat16",
+  "eos_token_id": 151643,
+  "head_dim": 128,
+  "hidden_act": "silu",
+  "hidden_size": 2048,
+  "initializer_range": 0.02,
+  "intermediate_size": 6144,
+  "layer_types": [
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention"
+  ],
+  "max_position_embeddings": 32768,
+  "max_window_layers": 28,
+  "model_type": "qwen3",
+  "num_attention_heads": 16,
+  "num_hidden_layers": 28,
+  "num_key_value_heads": 8,
+  "pad_token_id": null,
+  "rms_norm_eps": 1e-06,
+  "rope_parameters": {
+    "rope_theta": 1000000,
+    "rope_type": "default"
+  },
+  "sliding_window": null,
+  "tie_word_embeddings": true,
+  "transformers_version": "5.8.0",
+  "use_cache": true,
+  "use_sliding_window": false,
+  "vocab_size": 151936
+}
+
+[INFO|configuration_utils.py:780] 2026-11-09 00:28:38,867 >> loading configuration file config.json from cache at /Users/senthilkumarpackiyam/.cache/huggingface/hub/models--Qwen--Qwen3-1.7B-Base/snapshots/ea980cb0a6c2ae4b936e82123acc929f1cec04c1/config.json
+[INFO|configuration_utils.py:856] 2026-11-09 00:28:38,868 >> Model config Qwen3Config {
+  "architectures": [
+    "Qwen3ForCausalLM"
+  ],
+  "attention_bias": false,
+  "attention_dropout": 0.0,
+  "bos_token_id": 151643,
+  "dtype": "bfloat16",
+  "eos_token_id": 151643,
+  "head_dim": 128,
+  "hidden_act": "silu",
+  "hidden_size": 2048,
+  "initializer_range": 0.02,
+  "intermediate_size": 6144,
+  "layer_types": [
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention"
+  ],
+  "max_position_embeddings": 32768,
+  "max_window_layers": 28,
+  "model_type": "qwen3",
+  "num_attention_heads": 16,
+  "num_hidden_layers": 28,
+  "num_key_value_heads": 8,
+  "pad_token_id": null,
+  "rms_norm_eps": 1e-06,
+  "rope_parameters": {
+    "rope_theta": 1000000,
+    "rope_type": "default"
+  },
+  "sliding_window": null,
+  "tie_word_embeddings": true,
+  "transformers_version": "5.8.0",
+  "use_cache": true,
+  "use_sliding_window": false,
+  "vocab_size": 151936
+}
+
+[INFO|2026-11-09 00:28:38] llamafactory.model.model_utils.kv_cache:144 >> KV cache is enabled for faster generation.
+[INFO|modeling_utils.py:769] 2026-11-09 00:28:39,248 >> loading weights file model.safetensors from cache at /Users/senthilkumarpackiyam/.cache/huggingface/hub/models--Qwen--Qwen3-1.7B-Base/snapshots/ea980cb0a6c2ae4b936e82123acc929f1cec04c1/model.safetensors
+[INFO|modeling_utils.py:839] 2026-11-09 00:28:39,248 >> Will use dtype=torch.bfloat16 as defined in model's config object
+[INFO|configuration_utils.py:1086] 2026-11-09 00:28:39,250 >> Generate config GenerationConfig {
+  "bos_token_id": 151643,
+  "eos_token_id": 151643,
+  "output_attentions": false,
+  "output_hidden_states": false,
+  "use_cache": true
+}
+
+Loading weights:   0%|          | 0/310 [00:00<?, ?it/s]Loading weights:   0%|          | 1/310 [00:00<02:35,  1.98it/s]Loading weights:   5%|▌         | 16/310 [00:00<00:08, 34.11it/s]Loading weights:  12%|█▏        | 36/310 [00:00<00:03, 73.35it/s]Loading weights:  16%|█▌        | 50/310 [00:00<00:02, 88.83it/s]Loading weights:  22%|██▏       | 69/310 [00:00<00:02, 113.82it/s]Loading weights:  27%|██▋       | 85/310 [00:01<00:01, 119.07it/s]Loading weights:  33%|███▎      | 102/310 [00:01<00:01, 125.72it/s]Loading weights:  38%|███▊      | 117/310 [00:01<00:01, 122.05it/s]Loading weights:  43%|████▎     | 132/310 [00:01<00:01, 126.91it/s]Loading weights:  47%|████▋     | 146/310 [00:01<00:01, 126.29it/s]Loading weights:  52%|█████▏    | 160/310 [00:01<00:01, 120.35it/s]Loading weights:  57%|█████▋    | 177/310 [00:01<00:01, 131.34it/s]Loading weights:  62%|██████▏   | 191/310 [00:01<00:00, 119.85it/s]Loading weights:  66%|██████▌   | 204/310 [00:02<00:00, 108.30it/s]Loading weights:  71%|███████   | 219/310 [00:02<00:00, 116.44it/s]Loading weights:  75%|███████▌  | 234/310 [00:02<00:00, 120.30it/s]Loading weights:  80%|███████▉  | 247/310 [00:02<00:00, 116.71it/s]Loading weights:  84%|████████▍ | 261/310 [00:02<00:00, 122.39it/s]Loading weights:  88%|████████▊ | 274/310 [00:02<00:00, 124.36it/s]Loading weights:  93%|█████████▎| 289/310 [00:02<00:00, 127.33it/s]Loading weights:  97%|█████████▋| 302/310 [00:02<00:00, 117.78it/s]Loading weights: 100%|██████████| 310/310 [00:02<00:00, 108.65it/s]
+[INFO|configuration_utils.py:1039] 2026-11-09 00:28:42,798 >> loading configuration file generation_config.json from cache at /Users/senthilkumarpackiyam/.cache/huggingface/hub/models--Qwen--Qwen3-1.7B-Base/snapshots/ea980cb0a6c2ae4b936e82123acc929f1cec04c1/generation_config.json
+[INFO|configuration_utils.py:1086] 2026-11-09 00:28:42,798 >> Generate config GenerationConfig {
+  "bos_token_id": 151643,
+  "do_sample": false,
+  "eos_token_id": 151643,
+  "max_new_tokens": 2048
+}
+
+[INFO|dynamic_module_utils.py:441] 2026-11-09 00:28:43,026 >> Could not locate the custom_generate/generate.py inside Qwen/Qwen3-1.7B-Base.
+[INFO|2026-11-09 00:28:43] llamafactory.model.model_utils.attention:144 >> Using torch SDPA for faster training and inference.
+[INFO|2026-11-09 00:28:43] llamafactory.model.adapter:144 >> Merged 1 adapter(s).
+[INFO|2026-11-09 00:28:43] llamafactory.model.adapter:144 >> Loaded adapter(s): saves/Qwen3-1.7B-Base/lora/train_2026-11-08-22-39-50
+[INFO|2026-11-09 00:28:43] llamafactory.model.loader:144 >> all params: 1,720,574,976
+[INFO|configuration_utils.py:780] 2026-11-09 00:29:45,437 >> loading configuration file config.json from cache at /Users/senthilkumarpackiyam/.cache/huggingface/hub/models--Qwen--Qwen3-1.7B-Base/snapshots/ea980cb0a6c2ae4b936e82123acc929f1cec04c1/config.json
+[INFO|configuration_utils.py:856] 2026-11-09 00:29:45,438 >> Model config Qwen3Config {
+  "architectures": [
+    "Qwen3ForCausalLM"
+  ],
+  "attention_bias": false,
+  "attention_dropout": 0.0,
+  "bos_token_id": 151643,
+  "dtype": "bfloat16",
+  "eos_token_id": 151643,
+  "head_dim": 128,
+  "hidden_act": "silu",
+  "hidden_size": 2048,
+  "initializer_range": 0.02,
+  "intermediate_size": 6144,
+  "layer_types": [
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention"
+  ],
+  "max_position_embeddings": 32768,
+  "max_window_layers": 28,
+  "model_type": "qwen3",
+  "num_attention_heads": 16,
+  "num_hidden_layers": 28,
+  "num_key_value_heads": 8,
+  "pad_token_id": null,
+  "rms_norm_eps": 1e-06,
+  "rope_parameters": {
+    "rope_theta": 1000000,
+    "rope_type": "default"
+  },
+  "sliding_window": null,
+  "tie_word_embeddings": true,
+  "transformers_version": "5.8.0",
+  "use_cache": true,
+  "use_sliding_window": false,
+  "vocab_size": 151936
+}
+
+[INFO|configuration_utils.py:780] 2026-11-09 00:29:48,292 >> loading configuration file config.json from cache at /Users/senthilkumarpackiyam/.cache/huggingface/hub/models--Qwen--Qwen3-1.7B-Base/snapshots/ea980cb0a6c2ae4b936e82123acc929f1cec04c1/config.json
+[INFO|configuration_utils.py:856] 2026-11-09 00:29:48,292 >> Model config Qwen3Config {
+  "architectures": [
+    "Qwen3ForCausalLM"
+  ],
+  "attention_bias": false,
+  "attention_dropout": 0.0,
+  "bos_token_id": 151643,
+  "dtype": "bfloat16",
+  "eos_token_id": 151643,
+  "head_dim": 128,
+  "hidden_act": "silu",
+  "hidden_size": 2048,
+  "initializer_range": 0.02,
+  "intermediate_size": 6144,
+  "layer_types": [
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention"
+  ],
+  "max_position_embeddings": 32768,
+  "max_window_layers": 28,
+  "model_type": "qwen3",
+  "num_attention_heads": 16,
+  "num_hidden_layers": 28,
+  "num_key_value_heads": 8,
+  "pad_token_id": null,
+  "rms_norm_eps": 1e-06,
+  "rope_parameters": {
+    "rope_theta": 1000000,
+    "rope_type": "default"
+  },
+  "sliding_window": null,
+  "tie_word_embeddings": true,
+  "transformers_version": "5.8.0",
+  "use_cache": true,
+  "use_sliding_window": false,
+  "vocab_size": 151936
+}
+
+[INFO|configuration_utils.py:780] 2026-11-09 00:29:48,535 >> loading configuration file config.json from cache at /Users/senthilkumarpackiyam/.cache/huggingface/hub/models--Qwen--Qwen3-1.7B-Base/snapshots/ea980cb0a6c2ae4b936e82123acc929f1cec04c1/config.json
+[INFO|configuration_utils.py:856] 2026-11-09 00:29:48,536 >> Model config Qwen3Config {
+  "architectures": [
+    "Qwen3ForCausalLM"
+  ],
+  "attention_bias": false,
+  "attention_dropout": 0.0,
+  "bos_token_id": 151643,
+  "dtype": "bfloat16",
+  "eos_token_id": 151643,
+  "head_dim": 128,
+  "hidden_act": "silu",
+  "hidden_size": 2048,
+  "initializer_range": 0.02,
+  "intermediate_size": 6144,
+  "layer_types": [
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention"
+  ],
+  "max_position_embeddings": 32768,
+  "max_window_layers": 28,
+  "model_type": "qwen3",
+  "num_attention_heads": 16,
+  "num_hidden_layers": 28,
+  "num_key_value_heads": 8,
+  "pad_token_id": null,
+  "rms_norm_eps": 1e-06,
+  "rope_parameters": {
+    "rope_theta": 1000000,
+    "rope_type": "default"
+  },
+  "sliding_window": null,
+  "tie_word_embeddings": true,
+  "transformers_version": "5.8.0",
+  "use_cache": true,
+  "use_sliding_window": false,
+  "vocab_size": 151936
+}
+
+[INFO|configuration_utils.py:780] 2026-11-09 00:29:49,899 >> loading configuration file config.json from cache at /Users/senthilkumarpackiyam/.cache/huggingface/hub/models--Qwen--Qwen3-1.7B-Base/snapshots/ea980cb0a6c2ae4b936e82123acc929f1cec04c1/config.json
+[INFO|configuration_utils.py:856] 2026-11-09 00:29:49,900 >> Model config Qwen3Config {
+  "architectures": [
+    "Qwen3ForCausalLM"
+  ],
+  "attention_bias": false,
+  "attention_dropout": 0.0,
+  "bos_token_id": 151643,
+  "dtype": "bfloat16",
+  "eos_token_id": 151643,
+  "head_dim": 128,
+  "hidden_act": "silu",
+  "hidden_size": 2048,
+  "initializer_range": 0.02,
+  "intermediate_size": 6144,
+  "layer_types": [
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention"
+  ],
+  "max_position_embeddings": 32768,
+  "max_window_layers": 28,
+  "model_type": "qwen3",
+  "num_attention_heads": 16,
+  "num_hidden_layers": 28,
+  "num_key_value_heads": 8,
+  "pad_token_id": null,
+  "rms_norm_eps": 1e-06,
+  "rope_parameters": {
+    "rope_theta": 1000000,
+    "rope_type": "default"
+  },
+  "sliding_window": null,
+  "tie_word_embeddings": true,
+  "transformers_version": "5.8.0",
+  "use_cache": true,
+  "use_sliding_window": false,
+  "vocab_size": 151936
+}
+
+[INFO|2026-11-09 00:29:49] llamafactory.model.model_utils.kv_cache:144 >> KV cache is enabled for faster generation.
+[INFO|modeling_utils.py:769] 2026-11-09 00:29:50,143 >> loading weights file model.safetensors from cache at /Users/senthilkumarpackiyam/.cache/huggingface/hub/models--Qwen--Qwen3-1.7B-Base/snapshots/ea980cb0a6c2ae4b936e82123acc929f1cec04c1/model.safetensors
+[INFO|modeling_utils.py:839] 2026-11-09 00:29:50,143 >> Will use dtype=torch.bfloat16 as defined in model's config object
+[INFO|configuration_utils.py:1086] 2026-11-09 00:29:50,144 >> Generate config GenerationConfig {
+  "bos_token_id": 151643,
+  "eos_token_id": 151643,
+  "output_attentions": false,
+  "output_hidden_states": false,
+  "use_cache": true
+}
+
+Loading weights:   0%|          | 0/310 [00:00<?, ?it/s]Loading weights:   0%|          | 1/310 [00:00<02:30,  2.06it/s]Loading weights:   5%|▍         | 15/310 [00:00<00:08, 32.90it/s]Loading weights:  11%|█         | 34/310 [00:00<00:03, 70.83it/s]Loading weights:  16%|█▌        | 49/310 [00:00<00:02, 87.81it/s]Loading weights:  22%|██▏       | 69/310 [00:00<00:02, 116.33it/s]Loading weights:  27%|██▋       | 85/310 [00:01<00:01, 124.81it/s]Loading weights:  33%|███▎      | 102/310 [00:01<00:01, 131.88it/s]Loading weights:  38%|███▊      | 117/310 [00:01<00:01, 128.62it/s]Loading weights:  44%|████▎     | 135/310 [00:01<00:01, 137.84it/s]Loading weights:  48%|████▊     | 150/310 [00:01<00:01, 137.22it/s]Loading weights:  53%|█████▎    | 165/310 [00:01<00:01, 139.78it/s]Loading weights:  58%|█████▊    | 180/310 [00:01<00:00, 132.86it/s]Loading weights:  63%|██████▎   | 194/310 [00:01<00:00, 132.08it/s]Loading weights:  67%|██████▋   | 208/310 [00:01<00:00, 125.59it/s]Loading weights:  72%|███████▏  | 223/310 [00:02<00:00, 131.59it/s]Loading weights:  76%|███████▋  | 237/310 [00:02<00:00, 128.60it/s]Loading weights:  83%|████████▎ | 256/310 [00:02<00:00, 140.11it/s]Loading weights:  87%|████████▋ | 271/310 [00:02<00:00, 132.40it/s]Loading weights:  92%|█████████▏| 285/310 [00:02<00:00, 127.02it/s]Loading weights:  96%|█████████▋| 299/310 [00:02<00:00, 127.87it/s]Loading weights: 100%|██████████| 310/310 [00:02<00:00, 115.13it/s]
+[INFO|configuration_utils.py:1039] 2026-11-09 00:29:53,485 >> loading configuration file generation_config.json from cache at /Users/senthilkumarpackiyam/.cache/huggingface/hub/models--Qwen--Qwen3-1.7B-Base/snapshots/ea980cb0a6c2ae4b936e82123acc929f1cec04c1/generation_config.json
+[INFO|configuration_utils.py:1086] 2026-11-09 00:29:53,485 >> Generate config GenerationConfig {
+  "bos_token_id": 151643,
+  "do_sample": false,
+  "eos_token_id": 151643,
+  "max_new_tokens": 2048
+}
+
+[INFO|dynamic_module_utils.py:441] 2026-11-09 00:29:53,724 >> Could not locate the custom_generate/generate.py inside Qwen/Qwen3-1.7B-Base.
+[INFO|2026-11-09 00:29:53] llamafactory.model.model_utils.attention:144 >> Using torch SDPA for faster training and inference.
+[INFO|2026-11-09 00:29:54] llamafactory.model.adapter:144 >> Merged 1 adapter(s).
+[INFO|2026-11-09 00:29:54] llamafactory.model.adapter:144 >> Loaded adapter(s): saves/Qwen3-1.7B-Base/lora/train_2026-11-08-22-39-50
+[INFO|2026-11-09 00:29:54] llamafactory.model.loader:144 >> all params: 1,720,574,976
+Keyboard interruption in main thread... closing server.

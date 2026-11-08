@@ -1,0 +1,32 @@
+[22:39:53] LLaMA Board loaded
+[22:39:56] model path='Qwen/Qwen3-1.7B-Base'  template='default'  finetuning='lora'
+[22:40:05] output dir='train_2026-11-08-22-39-50'; preview command captured=True
+[22:40:05] Start clicked
+[22:42:21] training… 2.3 min  progress=[]
+[22:44:22] training… 4.3 min  progress=[]
+[22:46:23] training… 6.3 min  progress=['Running 5/90: 0:03:50 < 1:05:19']
+[22:48:23] training… 8.3 min  progress=['Running 5/90: 0:03:50 < 1:05:19']
+[22:50:24] training… 10.3 min  progress=['Running 10/90: 0:08:19 < 1:06:37']
+[22:52:25] training… 12.3 min  progress=['Running 10/90: 0:08:19 < 1:06:37']
+[22:54:26] training… 14.3 min  progress=['Running 15/90: 0:12:48 < 1:04:03']
+[22:56:27] training… 16.4 min  progress=['Running 15/90: 0:12:48 < 1:04:03']
+[22:58:27] training… 18.4 min  progress=['Running 20/90: 0:17:11 < 1:00:10']
+[23:00:28] training… 20.4 min  progress=['Running 20/90: 0:17:11 < 1:00:10']
+[23:02:29] training… 22.4 min  progress=['Running 25/90: 0:21:37 < 0:56:13']
+[23:04:31] training… 24.4 min  progress=['Running 25/90: 0:21:37 < 0:56:13']
+[23:06:33] training… 26.5 min  progress=['Running 25/90: 0:21:37 < 0:56:13']
+Traceback (most recent call last):
+  File "/Users/senthilkumarpackiyam/Documents/GEN_ACADEMY/week5/scripts/llamaboard_train.py", line 181, in <module>
+    main()
+  File "/Users/senthilkumarpackiyam/Documents/GEN_ACADEMY/week5/scripts/llamaboard_train.py", line 138, in main
+    page.wait_for_timeout(20_000)
+  File "/Users/senthilkumarpackiyam/Documents/GEN_ACADEMY/week5/.venv/lib/python3.11/site-packages/playwright/sync_api/_generated.py", line 21403, in wait_for_timeout
+    self._sync(self._impl_obj.wait_for_timeout(timeout=to_milliseconds(timeout)))
+  File "/Users/senthilkumarpackiyam/Documents/GEN_ACADEMY/week5/.venv/lib/python3.11/site-packages/playwright/_impl/_sync_base.py", line 110, in _sync
+    wait_for_future(self._loop, self._dispatcher_fiber, task)
+  File "/Users/senthilkumarpackiyam/Documents/GEN_ACADEMY/week5/.venv/lib/python3.11/site-packages/playwright/_impl/_greenlets.py", line 84, in wait_for_future
+    dispatcher_fiber.switch()
+KeyboardInterrupt
+Future exception was never retrieved
+future: <Future finished exception=TargetClosedError('Target page, context or browser has been closed')>
+playwright._impl._errors.TargetClosedError: Target page, context or browser has been closed

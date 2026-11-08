@@ -71,45 +71,53 @@ that from the labels; expect most errors at the `Support general` ↔ `Active Di
 
 ## LLaMA-Factory pipeline check (what training will actually see)
 
-The dataset was loaded through LLaMA-Factory's own SFT data pipeline, with the settings LLaMA Board
-uses by default for `Qwen3-1.7B-Base`: template **`qwen3`**, "Enable thinking" **on**,
-`cutoff_len` **2048**.
+The dataset was loaded through LLaMA-Factory's own SFT data pipeline with LLaMA Board's default
+settings (`cutoff_len` 2048, "Enable thinking" on), once for each candidate chat template.
 
 - All **468** examples parse correctly.
-- Training sequences are **90–190 tokens** (median 107, p95 126). The default `cutoff_len` of
-  2048 truncates nothing. Batches are padded only to their longest example, so a smaller cutoff
-  would not speed things up either.
-- Only **7–10 tokens per example carry loss** (the answer); the system prompt and ticket are masked.
+- Training sequences are **83–190 tokens** depending on the template (median ≈ 100–107, p95 ≈ 120).
+  The default `cutoff_len` of 2048 truncates nothing. Batches are padded only to their longest
+  example, so a smaller cutoff would not speed things up either.
+- Only the answer tokens carry loss; the system prompt and ticket are masked.
 
-Exact sequence for one example (masked prompt | **trained response**):
+### Which chat template does LLaMA Board use? (corrected in Phase 3)
 
-```
-<|im_start|>system
-You are an IT helpdesk ticket routing assistant. ...<|im_end|>
-<|im_start|>user
-Support Ticket: Hi, could you please create a light external user account ...<|im_end|>
-<|im_start|>assistant
-───────────────────────────────── loss starts here ─────────────
-<think>\n\n</think>\n\nSupport general<|im_end|>\n
-```
+> **Correction:** the first version of this note assumed LLaMA Board auto-selects the `qwen3`
+> template for Qwen3-1.7B-Base. The Phase 3 dry run of the UI showed otherwise: LLaMA Board only
+> auto-fills the template for `-Chat / -Instruct / -Distill / -Thinking` models. For a **Base**
+> model the *Chat template* field stays **`default`** (`register_model_group` in
+> `LLaMA-Factory/src/llamafactory/extras/constants.py`). The analysis below covers all three
+> candidates; the conclusion is to **keep LLaMA Board's `default`**.
 
-### ⚠️ Template finding: the course's `classify()` would fail with these defaults
+| Template | Trained sequence (prompt → **answer with loss**) | Prompt = Qwen's original template? | Answer = bare label? |
+|---|---|---|---|
+| **`default`** (LLaMA Board's choice for Base models) | `System: …<\|endoftext\|>\nHuman: Support Ticket: …<\|endoftext\|>\nAssistant:` → **`Support general<\|endoftext\|>`** | ✗ (own format) | ✓ |
+| `qwen3` | `<\|im_start\|>system … <\|im_start\|>assistant\n` → **`<think>\n\n</think>\n\nSupport general<\|im_end\|>`** | ✓ | ✗ (empty think block) |
+| `qwen3_nothink` | `<\|im_start\|>system … <\|im_start\|>assistant\n` → **`Support general<\|im_end\|>`** | ✓ | ✓ |
 
-The `qwen3` template is a *reasoning* template. Because the training answers contain no
-reasoning, it prepends an **empty `<think>\n\n</think>\n\n` block to every trained response**. The
-course notebook's `classify()` then:
+**Why `default` is consistent end-to-end:** the `default` template sets
+`replace_jinja_template=True`, so LLaMA-Factory **rewrites the tokenizer's chat template** to
+the `System: / Human: / Assistant:` format and saves that tokenizer next to the LoRA adapter. The
+course's merge cell loads the tokenizer from the adapter folder (`tok_src = ADAPTER_DIR if
+tokenizer.json exists`). `classify()` therefore calls `apply_chat_template` with the *training*
+format; verified token-for-token (`check_lf_prompt_equals_hf_default: true`). Rule for Phase 5:
+**always load the tokenizer from the adapter folder**, never from `Qwen/Qwen3-1.7B-Base`.
+Otherwise the merged model is prompted in ChatML it never saw during training.
 
-1. builds the prompt with `apply_chat_template(..., add_generation_prompt=True)`. Verified: this
-   equals the training prompt **without** the think block;
-2. lets the model generate, which it will do as trained: `<think>\n\n</think>\n\nO365`;
-3. decodes with `skip_special_tokens=True`. **`<think>` / `</think>` are *not* special tokens**
-   in the Qwen3 tokenizer (verified), so the text still starts with `<think>`;
-4. checks `generated.startswith(label)`, which fails for every label, so it **falls back to
-   `"Support general"` for every ticket** (≈ 25.6 % accuracy regardless of training). The
-   confidence score is also computed on the `<think>` token instead of the label.
+### ⚠️ Pitfall: picking `qwen3` by hand breaks the course's `classify()`
 
-**Fix, used in Phase 5:** build the inference prompt with `enable_thinking=False`. Verified:
-the Hugging Face template then appends exactly `<think>\n\n</think>\n\n`, so the prompt is
-**token-identical to the training sequence right up to the label**. The first generated token is
-the label's first token, and the confidence score measures the label decision. Training keeps
-LLaMA Board's defaults; nothing about the course's training procedure changes.
+Selecting `qwen3` looks like the "right" template for a Qwen3 model, but it is a *reasoning*
+template. With no reasoning in the answers, it prepends an **empty `<think>\n\n</think>\n\n`
+block to every trained response**, and `qwen3` does *not* rewrite the tokenizer template. Then:
+
+1. `apply_chat_template(..., add_generation_prompt=True)` builds the prompt **without** the think block;
+2. the model generates as trained: `<think>\n\n</think>\n\nO365`;
+3. `skip_special_tokens=True` does not remove it. **`<think>` / `</think>` are not special
+   tokens** in the Qwen3 tokenizer (verified);
+4. `generated.startswith(label)` fails for every label, so **every ticket falls back to
+   `"Support general"`** (≈ 25.6 % accuracy regardless of training).
+
+If `qwen3` is used, the fix is `apply_chat_template(..., enable_thinking=False)` at inference.
+Verified: that appends exactly the trained think block. `qwen3_nothink` avoids the issue entirely.
+LLaMA-Factory itself warns about this at load time: *"If the base model is NOT a reasoning model…
+please add `_nothink` suffix."*

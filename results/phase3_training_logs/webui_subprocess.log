@@ -1,0 +1,509 @@
+[INFO|2026-11-08 22:40:10] llamafactory.hparams.parser:678 >> Process rank: 0, world size: 1, device: mps, distributed training: False, compute dtype: torch.bfloat16
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[INFO|configuration_utils.py:780] 2026-11-08 22:40:10,486 >> loading configuration file config.json from cache at /Users/senthilkumarpackiyam/.cache/huggingface/hub/models--Qwen--Qwen3-1.7B-Base/snapshots/ea980cb0a6c2ae4b936e82123acc929f1cec04c1/config.json
+[INFO|configuration_utils.py:856] 2026-11-08 22:40:10,490 >> Model config Qwen3Config {
+  "architectures": [
+    "Qwen3ForCausalLM"
+  ],
+  "attention_bias": false,
+  "attention_dropout": 0.0,
+  "bos_token_id": 151643,
+  "dtype": "bfloat16",
+  "eos_token_id": 151643,
+  "head_dim": 128,
+  "hidden_act": "silu",
+  "hidden_size": 2048,
+  "initializer_range": 0.02,
+  "intermediate_size": 6144,
+  "layer_types": [
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention"
+  ],
+  "max_position_embeddings": 32768,
+  "max_window_layers": 28,
+  "model_type": "qwen3",
+  "num_attention_heads": 16,
+  "num_hidden_layers": 28,
+  "num_key_value_heads": 8,
+  "pad_token_id": null,
+  "rms_norm_eps": 1e-06,
+  "rope_parameters": {
+    "rope_theta": 1000000,
+    "rope_type": "default"
+  },
+  "sliding_window": null,
+  "tie_word_embeddings": true,
+  "transformers_version": "5.8.0",
+  "use_cache": true,
+  "use_sliding_window": false,
+  "vocab_size": 151936
+}
+
+[INFO|configuration_utils.py:780] 2026-11-08 22:40:13,065 >> loading configuration file config.json from cache at /Users/senthilkumarpackiyam/.cache/huggingface/hub/models--Qwen--Qwen3-1.7B-Base/snapshots/ea980cb0a6c2ae4b936e82123acc929f1cec04c1/config.json
+[INFO|configuration_utils.py:856] 2026-11-08 22:40:13,065 >> Model config Qwen3Config {
+  "architectures": [
+    "Qwen3ForCausalLM"
+  ],
+  "attention_bias": false,
+  "attention_dropout": 0.0,
+  "bos_token_id": 151643,
+  "dtype": "bfloat16",
+  "eos_token_id": 151643,
+  "head_dim": 128,
+  "hidden_act": "silu",
+  "hidden_size": 2048,
+  "initializer_range": 0.02,
+  "intermediate_size": 6144,
+  "layer_types": [
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention"
+  ],
+  "max_position_embeddings": 32768,
+  "max_window_layers": 28,
+  "model_type": "qwen3",
+  "num_attention_heads": 16,
+  "num_hidden_layers": 28,
+  "num_key_value_heads": 8,
+  "pad_token_id": null,
+  "rms_norm_eps": 1e-06,
+  "rope_parameters": {
+    "rope_theta": 1000000,
+    "rope_type": "default"
+  },
+  "sliding_window": null,
+  "tie_word_embeddings": true,
+  "transformers_version": "5.8.0",
+  "use_cache": true,
+  "use_sliding_window": false,
+  "vocab_size": 151936
+}
+
+[INFO|configuration_utils.py:780] 2026-11-08 22:40:13,310 >> loading configuration file config.json from cache at /Users/senthilkumarpackiyam/.cache/huggingface/hub/models--Qwen--Qwen3-1.7B-Base/snapshots/ea980cb0a6c2ae4b936e82123acc929f1cec04c1/config.json
+[INFO|configuration_utils.py:856] 2026-11-08 22:40:13,311 >> Model config Qwen3Config {
+  "architectures": [
+    "Qwen3ForCausalLM"
+  ],
+  "attention_bias": false,
+  "attention_dropout": 0.0,
+  "bos_token_id": 151643,
+  "dtype": "bfloat16",
+  "eos_token_id": 151643,
+  "head_dim": 128,
+  "hidden_act": "silu",
+  "hidden_size": 2048,
+  "initializer_range": 0.02,
+  "intermediate_size": 6144,
+  "layer_types": [
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention"
+  ],
+  "max_position_embeddings": 32768,
+  "max_window_layers": 28,
+  "model_type": "qwen3",
+  "num_attention_heads": 16,
+  "num_hidden_layers": 28,
+  "num_key_value_heads": 8,
+  "pad_token_id": null,
+  "rms_norm_eps": 1e-06,
+  "rope_parameters": {
+    "rope_theta": 1000000,
+    "rope_type": "default"
+  },
+  "sliding_window": null,
+  "tie_word_embeddings": true,
+  "transformers_version": "5.8.0",
+  "use_cache": true,
+  "use_sliding_window": false,
+  "vocab_size": 151936
+}
+
+[INFO|2026-11-08 22:40:14] llamafactory.data.loader:144 >> Loading dataset TRAIN.json...
+Converting format of dataset (num_proc=16):   0%|          | 0/468 [00:00<?, ? examples/s]Converting format of dataset (num_proc=16):   6%|▋         | 30/468 [00:00<00:01, 223.22 examples/s]Converting format of dataset (num_proc=16): 100%|██████████| 468/468 [00:00<00:00, 1915.07 examples/s]
+Running tokenizer on dataset (num_proc=16):   0%|          | 0/468 [00:00<?, ? examples/s]Running tokenizer on dataset (num_proc=16):   6%|▋         | 30/468 [00:01<00:16, 27.18 examples/s]Running tokenizer on dataset (num_proc=16):  13%|█▎        | 60/468 [00:01<00:12, 32.40 examples/s]Running tokenizer on dataset (num_proc=16):  19%|█▉        | 90/468 [00:02<00:10, 35.82 examples/s]Running tokenizer on dataset (num_proc=16):  26%|██▌       | 120/468 [00:03<00:09, 37.36 examples/s]Running tokenizer on dataset (num_proc=16):  32%|███▏      | 149/468 [00:04<00:08, 37.70 examples/s]Running tokenizer on dataset (num_proc=16):  38%|███▊      | 178/468 [00:04<00:07, 38.00 examples/s]Running tokenizer on dataset (num_proc=16):  44%|████▍     | 207/468 [00:05<00:06, 38.18 examples/s]Running tokenizer on dataset (num_proc=16):  50%|█████     | 236/468 [00:06<00:06, 38.10 examples/s]Running tokenizer on dataset (num_proc=16):  57%|█████▋    | 265/468 [00:07<00:05, 38.07 examples/s]Running tokenizer on dataset (num_proc=16):  63%|██████▎   | 294/468 [00:07<00:04, 37.60 examples/s]Running tokenizer on dataset (num_proc=16):  69%|██████▉   | 323/468 [00:08<00:03, 38.48 examples/s]Running tokenizer on dataset (num_proc=16):  75%|███████▌  | 352/468 [00:09<00:03, 38.34 examples/s]Running tokenizer on dataset (num_proc=16):  81%|████████▏ | 381/468 [00:10<00:02, 38.02 examples/s]Running tokenizer on dataset (num_proc=16):  88%|████████▊ | 410/468 [00:10<00:01, 38.15 examples/s]Running tokenizer on dataset (num_proc=16):  94%|█████████▍| 439/468 [00:11<00:00, 38.46 examples/s]Running tokenizer on dataset (num_proc=16): 100%|██████████| 468/468 [00:12<00:00, 38.70 examples/s]Running tokenizer on dataset (num_proc=16): 100%|██████████| 468/468 [00:12<00:00, 37.29 examples/s]
+[INFO|configuration_utils.py:780] 2026-11-08 22:40:29,165 >> loading configuration file config.json from cache at /Users/senthilkumarpackiyam/.cache/huggingface/hub/models--Qwen--Qwen3-1.7B-Base/snapshots/ea980cb0a6c2ae4b936e82123acc929f1cec04c1/config.json
+[INFO|configuration_utils.py:856] 2026-11-08 22:40:29,166 >> Model config Qwen3Config {
+  "architectures": [
+    "Qwen3ForCausalLM"
+  ],
+  "attention_bias": false,
+  "attention_dropout": 0.0,
+  "bos_token_id": 151643,
+  "dtype": "bfloat16",
+  "eos_token_id": 151643,
+  "head_dim": 128,
+  "hidden_act": "silu",
+  "hidden_size": 2048,
+  "initializer_range": 0.02,
+  "intermediate_size": 6144,
+  "layer_types": [
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention"
+  ],
+  "max_position_embeddings": 32768,
+  "max_window_layers": 28,
+  "model_type": "qwen3",
+  "num_attention_heads": 16,
+  "num_hidden_layers": 28,
+  "num_key_value_heads": 8,
+  "pad_token_id": null,
+  "rms_norm_eps": 1e-06,
+  "rope_parameters": {
+    "rope_theta": 1000000,
+    "rope_type": "default"
+  },
+  "sliding_window": null,
+  "tie_word_embeddings": true,
+  "transformers_version": "5.8.0",
+  "use_cache": true,
+  "use_sliding_window": false,
+  "vocab_size": 151936
+}
+
+training example:
+input_ids:
+[2320, 25, 1446, 525, 458, 8700, 1492, 50069, 11727, 29058, 17847, 13, 16246, 264, 1824, 11727, 11, 5889, 448, 6896, 825, 315, 279, 2701, 11059, 25, 9186, 4586, 11, 2887, 7936, 11, 506, 18, 21, 20, 11, 468, 1930, 11, 4377, 11, 9905, 18033, 11, 17407, 6222, 2161, 13, 151643, 198, 33975, 25, 9186, 28397, 25, 21018, 11, 1410, 498, 4486, 1855, 264, 3100, 9250, 1196, 2692, 369, 4325, 4889, 1039, 21424, 30, 2379, 3278, 1101, 1184, 2551, 2615, 323, 6770, 1849, 2615, 311, 633, 3855, 13, 151643, 198, 71703, 25, 7916, 4586, 151643, 198]
+inputs:
+System: You are an IT helpdesk ticket routing assistant. Given a support ticket, respond with exactly one of the following categories: Support general, Fileservice, O365, EOL, Software, Active Directory, Computer-Services.<|endoftext|>
+Human: Support Ticket: Hi, could you please create a light external user account for someone outside our organisation? They'll just need email access and basic system access to get started.<|endoftext|>
+Assistant:Support general<|endoftext|>
+
+label_ids:
+[-100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, 7916, 4586, 151643, 198]
+labels:
+Support general<|endoftext|>
+
+[INFO|2026-11-08 22:40:29] llamafactory.model.model_utils.kv_cache:144 >> KV cache is disabled during training.
+[INFO|modeling_utils.py:769] 2026-11-08 22:40:29,889 >> loading weights file model.safetensors from cache at /Users/senthilkumarpackiyam/.cache/huggingface/hub/models--Qwen--Qwen3-1.7B-Base/snapshots/ea980cb0a6c2ae4b936e82123acc929f1cec04c1/model.safetensors
+[INFO|modeling_utils.py:839] 2026-11-08 22:40:29,889 >> Will use dtype=torch.bfloat16 as defined in model's config object
+[INFO|configuration_utils.py:1086] 2026-11-08 22:40:29,890 >> Generate config GenerationConfig {
+  "bos_token_id": 151643,
+  "eos_token_id": 151643,
+  "output_attentions": false,
+  "output_hidden_states": false,
+  "use_cache": false
+}
+
+Loading weights:   0%|          | 0/310 [00:00<?, ?it/s]Loading weights:   0%|          | 1/310 [00:00<03:46,  1.36it/s]Loading weights:   5%|▍         | 15/310 [00:00<00:12, 23.37it/s]Loading weights:   9%|▊         | 27/310 [00:00<00:07, 40.16it/s]Loading weights:  14%|█▎        | 42/310 [00:01<00:04, 62.28it/s]Loading weights:  18%|█▊        | 56/310 [00:01<00:03, 79.18it/s]Loading weights:  22%|██▏       | 68/310 [00:01<00:02, 84.59it/s]Loading weights:  26%|██▌       | 80/310 [00:01<00:02, 92.13it/s]Loading weights:  30%|██▉       | 92/310 [00:01<00:02, 90.28it/s]Loading weights:  33%|███▎      | 103/310 [00:01<00:02, 85.31it/s]Loading weights:  37%|███▋      | 114/310 [00:01<00:02, 82.07it/s]Loading weights:  40%|████      | 124/310 [00:01<00:02, 85.05it/s]Loading weights:  43%|████▎     | 134/310 [00:02<00:02, 72.61it/s]Loading weights:  46%|████▌     | 142/310 [00:02<00:02, 72.71it/s]Loading weights:  48%|████▊     | 150/310 [00:02<00:02, 66.75it/s]Loading weights:  51%|█████     | 158/310 [00:02<00:02, 65.61it/s]Loading weights:  54%|█████▍    | 168/310 [00:02<00:01, 72.48it/s]Loading weights:  57%|█████▋    | 176/310 [00:02<00:01, 71.70it/s]Loading weights:  59%|█████▉    | 184/310 [00:02<00:01, 70.53it/s]Loading weights:  62%|██████▏   | 192/310 [00:02<00:01, 69.31it/s]Loading weights:  65%|██████▌   | 202/310 [00:03<00:01, 74.18it/s]Loading weights:  68%|██████▊   | 212/310 [00:03<00:01, 80.74it/s]Loading weights:  71%|███████▏  | 221/310 [00:03<00:01, 80.34it/s]Loading weights:  74%|███████▍  | 230/310 [00:03<00:01, 72.27it/s]Loading weights:  77%|███████▋  | 238/310 [00:03<00:00, 72.67it/s]Loading weights:  79%|███████▉  | 246/310 [00:03<00:00, 71.71it/s]Loading weights:  83%|████████▎ | 257/310 [00:03<00:00, 77.92it/s]Loading weights:  86%|████████▌ | 267/310 [00:03<00:00, 79.51it/s]Loading weights:  90%|████████▉ | 278/310 [00:04<00:00, 79.43it/s]Loading weights:  92%|█████████▏| 286/310 [00:04<00:00, 78.49it/s]Loading weights:  95%|█████████▍| 294/310 [00:04<00:00, 74.01it/s]Loading weights:  97%|█████████▋| 302/310 [00:04<00:00, 64.05it/s]Loading weights: 100%|██████████| 310/310 [00:04<00:00, 68.99it/s]
+[INFO|configuration_utils.py:1039] 2026-11-08 22:40:35,398 >> loading configuration file generation_config.json from cache at /Users/senthilkumarpackiyam/.cache/huggingface/hub/models--Qwen--Qwen3-1.7B-Base/snapshots/ea980cb0a6c2ae4b936e82123acc929f1cec04c1/generation_config.json
+[INFO|configuration_utils.py:1086] 2026-11-08 22:40:35,399 >> Generate config GenerationConfig {
+  "bos_token_id": 151643,
+  "do_sample": false,
+  "eos_token_id": 151643,
+  "max_new_tokens": 2048
+}
+
+[INFO|dynamic_module_utils.py:441] 2026-11-08 22:40:35,634 >> Could not locate the custom_generate/generate.py inside Qwen/Qwen3-1.7B-Base.
+[INFO|2026-11-08 22:40:35] llamafactory.model.model_utils.checkpointing:144 >> Gradient checkpointing enabled.
+[INFO|2026-11-08 22:40:35] llamafactory.model.model_utils.attention:144 >> Using torch SDPA for faster training and inference.
+[INFO|2026-11-08 22:40:35] llamafactory.model.adapter:144 >> Upcasting trainable params to float32.
+[INFO|2026-11-08 22:40:35] llamafactory.model.adapter:144 >> Fine-tuning method: LoRA
+[INFO|2026-11-08 22:40:35] llamafactory.model.model_utils.misc:144 >> Found linear modules: v_proj,o_proj,k_proj,down_proj,up_proj,q_proj,gate_proj
+[INFO|2026-11-08 22:40:35] llamafactory.model.loader:144 >> trainable params: 8,716,288 || all params: 1,729,291,264 || trainable%: 0.5040
+[WARNING|trainer_utils.py:1238] 2026-11-08 22:40:35,846 >> The tokenizer has new PAD/BOS/EOS tokens that differ from the model config and generation config. The model config and generation config were aligned accordingly, being updated with the tokenizer's values. Updated tokens: {'bos_token_id': None, 'pad_token_id': 151643}.
+[INFO|trainer.py:1469] 2026-11-08 22:40:36,091 >> ***** Running training *****
+[INFO|trainer.py:1470] 2026-11-08 22:40:36,091 >>   Num examples = 468
+[INFO|trainer.py:1471] 2026-11-08 22:40:36,091 >>   Num Epochs = 3
+[INFO|trainer.py:1472] 2026-11-08 22:40:36,091 >>   Num update steps per epoch = 30
+[INFO|trainer.py:1473] 2026-11-08 22:40:36,091 >>   Instantaneous batch size per device = 2
+[INFO|trainer.py:1476] 2026-11-08 22:40:36,091 >>   Total train batch size (w. parallel, distributed & accumulation) = 16
+[INFO|trainer.py:1477] 2026-11-08 22:40:36,091 >>   Gradient Accumulation steps = 8
+[INFO|trainer.py:1478] 2026-11-08 22:40:36,091 >>   Total optimization steps = 90
+[INFO|trainer.py:1479] 2026-11-08 22:40:36,093 >>   Number of trainable parameters = 8,716,288
+  0%|          | 0/90 [00:00<?, ?it/s]/Users/senthilkumarpackiyam/Documents/GEN_ACADEMY/week5/.venv/lib/python3.11/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 'pin_memory' argument is set as true but not supported on MPS now, device pinned memory won't be used.
+  super().__init__(loader)
+  1%|          | 1/90 [00:21<32:07, 21.66s/it]  2%|▏         | 2/90 [00:59<45:34, 31.08s/it]  3%|▎         | 3/90 [02:01<1:05:37, 45.26s/it]  4%|▍         | 4/90 [02:54<1:09:28, 48.47s/it]  6%|▌         | 5/90 [03:50<1:12:20, 51.07s/it][INFO|2026-11-08 22:44:26] llamafactory.train.callbacks:144 >> {'loss': 7.1595, 'learning_rate': 4.9757e-05, 'epoch': 0.17, 'throughput': 38.03}
+                                                  6%|▌         | 5/90 [03:50<1:12:20, 51.07s/it]  7%|▋         | 6/90 [04:41<1:11:35, 51.14s/it]  8%|▊         | 7/90 [05:39<1:13:50, 53.38s/it]  9%|▉         | 8/90 [06:32<1:12:30, 53.06s/it] 10%|█         | 9/90 [07:25<1:11:56, 53.29s/it] 11%|█         | 10/90 [08:19<1:11:14, 53.43s/it]{'loss': '7.16', 'grad_norm': '27.73', 'learning_rate': '4.976e-05', 'epoch': '0.1709', 'num_input_tokens_seen': 8768, 'train_runtime': '230.6', 'train_tokens_per_second': '38.02'}
+[INFO|2026-11-08 22:48:55] llamafactory.train.callbacks:144 >> {'loss': 3.3611, 'learning_rate': 4.8776e-05, 'epoch': 0.34, 'throughput': 35.70}
+                                                  11%|█         | 10/90 [08:19<1:11:14, 53.43s/it] 12%|█▏        | 11/90 [09:12<1:10:14, 53.34s/it] 13%|█▎        | 12/90 [10:08<1:10:15, 54.05s/it] 14%|█▍        | 13/90 [10:59<1:08:16, 53.20s/it] 16%|█▌        | 14/90 [11:52<1:07:22, 53.19s/it] 17%|█▋        | 15/90 [12:48<1:07:24, 53.93s/it]{'loss': '3.361', 'grad_norm': '11.45', 'learning_rate': '4.878e-05', 'epoch': '0.3419', 'num_input_tokens_seen': 17840, 'train_runtime': '499.8', 'train_tokens_per_second': '35.7'}
+[INFO|2026-11-08 22:53:24] llamafactory.train.callbacks:144 >> {'loss': 1.4003, 'learning_rate': 4.7074e-05, 'epoch': 0.51, 'throughput': 34.49}
+                                                  17%|█▋        | 15/90 [12:48<1:07:24, 53.93s/it] 18%|█▊        | 16/90 [13:40<1:05:49, 53.37s/it] 19%|█▉        | 17/90 [14:32<1:04:17, 52.84s/it] 20%|██        | 18/90 [15:23<1:02:42, 52.26s/it] 21%|██        | 19/90 [16:15<1:02:00, 52.40s/it] 22%|██▏       | 20/90 [17:11<1:02:17, 53.39s/it]{'loss': '1.4', 'grad_norm': '7.885', 'learning_rate': '4.707e-05', 'epoch': '0.5128', 'num_input_tokens_seen': 26512, 'train_runtime': '768.6', 'train_tokens_per_second': '34.49'}
+[INFO|2026-11-08 22:57:47] llamafactory.train.callbacks:144 >> {'loss': 0.6904, 'learning_rate': 4.4700e-05, 'epoch': 0.68, 'throughput': 34.23}
+                                                  22%|██▏       | 20/90 [17:11<1:02:17, 53.39s/it] 23%|██▎       | 21/90 [18:02<1:00:41, 52.77s/it] 24%|██▍       | 22/90 [18:53<59:04, 52.13s/it]   26%|██▌       | 23/90 [19:49<59:28, 53.25s/it] 27%|██▋       | 24/90 [20:42<58:39, 53.32s/it] 28%|██▊       | 25/90 [21:37<58:12, 53.73s/it]{'loss': '0.6904', 'grad_norm': '3.584', 'learning_rate': '4.47e-05', 'epoch': '0.6838', 'num_input_tokens_seen': 35312, 'train_runtime': '1032', 'train_tokens_per_second': '34.23'}
+[INFO|2026-11-08 23:02:13] llamafactory.train.callbacks:144 >> {'loss': 0.4203, 'learning_rate': 4.1728e-05, 'epoch': 0.85, 'throughput': 33.94}
+                                                28%|██▊       | 25/90 [21:37<58:12, 53.73s/it] 29%|██▉       | 26/90 [22:31<57:20, 53.76s/it] 30%|███       | 27/90 [24:00<1:07:28, 64.26s/it] 31%|███       | 28/90 [25:36<1:16:12, 73.75s/it] 32%|███▏      | 29/90 [26:42<1:12:36, 71.42s/it] 33%|███▎      | 30/90 [26:56<54:13, 54.22s/it]  {'loss': '0.4203', 'grad_norm': '1.65', 'learning_rate': '4.173e-05', 'epoch': '0.8547', 'num_input_tokens_seen': 44048, 'train_runtime': '1298', 'train_tokens_per_second': '33.94'}
+[INFO|2026-11-08 23:07:32] llamafactory.train.callbacks:144 >> {'loss': 0.2861, 'learning_rate': 3.8248e-05, 'epoch': 1.00, 'throughput': 32.01}
+                                                33%|███▎      | 30/90 [26:56<54:13, 54.22s/it] 34%|███▍      | 31/90 [27:55<54:53, 55.83s/it] 36%|███▌      | 32/90 [28:50<53:41, 55.54s/it] 37%|███▋      | 33/90 [29:47<53:12, 56.01s/it] 38%|███▊      | 34/90 [30:43<52:12, 55.94s/it] 39%|███▉      | 35/90 [31:34<49:48, 54.33s/it]{'loss': '0.2861', 'grad_norm': '1.765', 'learning_rate': '3.825e-05', 'epoch': '1', 'num_input_tokens_seen': 51744, 'train_runtime': '1616', 'train_tokens_per_second': '32.02'}
+[INFO|2026-11-08 23:12:10] llamafactory.train.callbacks:144 >> {'loss': 0.2957, 'learning_rate': 3.4365e-05, 'epoch': 1.17, 'throughput': 31.88}
+                                                39%|███▉      | 35/90 [31:34<49:48, 54.33s/it] 40%|████      | 36/90 [32:38<51:43, 57.47s/it] 41%|████      | 37/90 [33:36<50:46, 57.48s/it] 42%|████▏     | 38/90 [34:30<49:01, 56.57s/it] 43%|████▎     | 39/90 [35:22<46:50, 55.10s/it] 44%|████▍     | 40/90 [36:19<46:16, 55.54s/it]{'loss': '0.2957', 'grad_norm': '1.064', 'learning_rate': '3.437e-05', 'epoch': '1.171', 'num_input_tokens_seen': 60384, 'train_runtime': '1894', 'train_tokens_per_second': '31.88'}
+[INFO|2026-11-08 23:16:55] llamafactory.train.callbacks:144 >> {'loss': 0.2639, 'learning_rate': 3.0198e-05, 'epoch': 1.34, 'throughput': 31.83}
+                                                44%|████▍     | 40/90 [36:19<46:16, 55.54s/it] 46%|████▌     | 41/90 [37:18<46:23, 56.80s/it] 47%|████▋     | 42/90 [38:14<45:12, 56.52s/it] 48%|████▊     | 43/90 [39:09<43:56, 56.09s/it] 49%|████▉     | 44/90 [40:07<43:28, 56.70s/it] 50%|█████     | 45/90 [41:02<42:06, 56.14s/it]{'loss': '0.2639', 'grad_norm': '1.245', 'learning_rate': '3.02e-05', 'epoch': '1.342', 'num_input_tokens_seen': 69360, 'train_runtime': '2179', 'train_tokens_per_second': '31.83'}
+[INFO|2026-11-08 23:21:38] llamafactory.train.callbacks:144 >> {'loss': 0.2456, 'learning_rate': 2.5872e-05, 'epoch': 1.51, 'throughput': 31.76}
+                                                50%|█████     | 45/90 [41:02<42:06, 56.14s/it] 51%|█████     | 46/90 [41:56<40:42, 55.52s/it] 52%|█████▏    | 47/90 [42:48<38:54, 54.28s/it] 53%|█████▎    | 48/90 [43:42<38:06, 54.44s/it] 54%|█████▍    | 49/90 [44:38<37:27, 54.81s/it] 56%|█████▌    | 50/90 [45:32<36:26, 54.66s/it]{'loss': '0.2456', 'grad_norm': '1.797', 'learning_rate': '2.587e-05', 'epoch': '1.513', 'num_input_tokens_seen': 78224, 'train_runtime': '2463', 'train_tokens_per_second': '31.76'}
+[INFO|2026-11-08 23:26:09] llamafactory.train.callbacks:144 >> {'loss': 0.2789, 'learning_rate': 2.1521e-05, 'epoch': 1.68, 'throughput': 31.84}
+                                                56%|█████▌    | 50/90 [45:32<36:26, 54.66s/it] 57%|█████▋    | 51/90 [46:25<35:03, 53.92s/it] 58%|█████▊    | 52/90 [47:13<33:07, 52.30s/it] 59%|█████▉    | 53/90 [48:03<31:51, 51.65s/it] 60%|██████    | 54/90 [48:53<30:37, 51.04s/it] 61%|██████    | 55/90 [49:40<29:07, 49.92s/it]{'loss': '0.2789', 'grad_norm': '2.138', 'learning_rate': '2.152e-05', 'epoch': '1.684', 'num_input_tokens_seen': 87024, 'train_runtime': '2733', 'train_tokens_per_second': '31.84'}
+[INFO|2026-11-08 23:30:16] llamafactory.train.callbacks:144 >> {'loss': 0.1640, 'learning_rate': 1.7275e-05, 'epoch': 1.85, 'throughput': 32.10}
+                                                61%|██████    | 55/90 [49:40<29:07, 49.92s/it] 62%|██████▏   | 56/90 [50:30<28:19, 49.99s/it] 63%|██████▎   | 57/90 [51:07<25:17, 45.98s/it] 64%|██████▍   | 58/90 [51:40<22:26, 42.07s/it] 66%|██████▌   | 59/90 [52:13<20:19, 39.32s/it] 67%|██████▋   | 60/90 [52:23<15:18, 30.61s/it]{'loss': '0.164', 'grad_norm': '1.077', 'learning_rate': '1.727e-05', 'epoch': '1.855', 'num_input_tokens_seen': 95696, 'train_runtime': '2981', 'train_tokens_per_second': '32.1'}
+[INFO|2026-11-08 23:32:59] llamafactory.train.callbacks:144 >> {'loss': 0.1869, 'learning_rate': 1.3263e-05, 'epoch': 2.00, 'throughput': 32.88}
+                                                67%|██████▋   | 60/90 [52:23<15:18, 30.61s/it] 68%|██████▊   | 61/90 [53:00<15:43, 32.54s/it] 69%|██████▉   | 62/90 [53:39<16:01, 34.35s/it] 70%|███████   | 63/90 [54:13<15:22, 34.18s/it] 71%|███████   | 64/90 [54:51<15:20, 35.42s/it] 72%|███████▏  | 65/90 [55:25<14:32, 34.91s/it]{'loss': '0.1869', 'grad_norm': '1.575', 'learning_rate': '1.326e-05', 'epoch': '2', 'num_input_tokens_seen': 103376, 'train_runtime': '3144', 'train_tokens_per_second': '32.88'}
+[INFO|2026-11-08 23:36:01] llamafactory.train.callbacks:144 >> {'loss': 0.2090, 'learning_rate': 9.6085e-06, 'epoch': 2.17, 'throughput': 33.75}
+                                                72%|███████▏  | 65/90 [55:25<14:32, 34.91s/it] 73%|███████▎  | 66/90 [55:59<13:54, 34.79s/it] 74%|███████▍  | 67/90 [56:34<13:19, 34.77s/it] 76%|███████▌  | 68/90 [57:09<12:49, 34.99s/it] 77%|███████▋  | 69/90 [57:43<12:06, 34.57s/it] 78%|███████▊  | 70/90 [58:16<11:22, 34.13s/it]{'loss': '0.209', 'grad_norm': '1.388', 'learning_rate': '9.608e-06', 'epoch': '2.171', 'num_input_tokens_seen': 112208, 'train_runtime': '3325', 'train_tokens_per_second': '33.75'}
+[INFO|2026-11-08 23:38:52] llamafactory.train.callbacks:144 >> {'loss': 0.1893, 'learning_rate': 6.4214e-06, 'epoch': 2.34, 'throughput': 34.68}
+                                                78%|███████▊  | 70/90 [58:16<11:22, 34.13s/it] 79%|███████▉  | 71/90 [58:54<11:08, 35.17s/it] 80%|████████  | 72/90 [59:27<10:22, 34.56s/it] 81%|████████  | 73/90 [1:00:03<09:55, 35.03s/it] 82%|████████▏ | 74/90 [1:00:33<08:58, 33.68s/it] 83%|████████▎ | 75/90 [1:01:07<08:23, 33.59s/it]{'loss': '0.1893', 'grad_norm': '0.7693', 'learning_rate': '6.421e-06', 'epoch': '2.342', 'num_input_tokens_seen': 121248, 'train_runtime': '3497', 'train_tokens_per_second': '34.68'}
+[INFO|2026-11-08 23:41:43] llamafactory.train.callbacks:144 >> {'loss': 0.1622, 'learning_rate': 3.7988e-06, 'epoch': 2.51, 'throughput': 35.50}
+                                                  83%|████████▎ | 75/90 [1:01:07<08:23, 33.59s/it] 84%|████████▍ | 76/90 [1:01:40<07:49, 33.53s/it] 86%|████████▌ | 77/90 [1:02:13<07:13, 33.38s/it] 87%|████████▋ | 78/90 [1:02:46<06:37, 33.13s/it] 88%|████████▊ | 79/90 [1:03:17<05:58, 32.56s/it] 89%|████████▉ | 80/90 [1:03:48<05:20, 32.05s/it]{'loss': '0.1622', 'grad_norm': '1.322', 'learning_rate': '3.799e-06', 'epoch': '2.513', 'num_input_tokens_seen': 130176, 'train_runtime': '3667', 'train_tokens_per_second': '35.5'}
+[INFO|2026-11-08 23:44:24] llamafactory.train.callbacks:144 >> {'loss': 0.1912, 'learning_rate': 1.8204e-06, 'epoch': 2.68, 'throughput': 36.26}
+                                                  89%|████████▉ | 80/90 [1:03:48<05:20, 32.05s/it] 90%|█████████ | 81/90 [1:04:20<04:49, 32.15s/it] 91%|█████████ | 82/90 [1:04:53<04:18, 32.37s/it] 92%|█████████▏| 83/90 [1:05:27<03:50, 32.88s/it] 93%|█████████▎| 84/90 [1:06:00<03:17, 32.91s/it] 94%|█████████▍| 85/90 [1:06:34<02:45, 33.05s/it]{'loss': '0.1912', 'grad_norm': '1.597', 'learning_rate': '1.82e-06', 'epoch': '2.684', 'num_input_tokens_seen': 138800, 'train_runtime': '3828', 'train_tokens_per_second': '36.26'}
+[INFO|2026-11-08 23:47:10] llamafactory.train.callbacks:144 >> {'loss': 0.2212, 'learning_rate': 5.4631e-07, 'epoch': 2.85, 'throughput': 36.97}
+                                                  94%|█████████▍| 85/90 [1:06:34<02:45, 33.05s/it] 96%|█████████▌| 86/90 [1:07:07<02:12, 33.19s/it] 97%|█████████▋| 87/90 [1:07:40<01:38, 32.99s/it] 98%|█████████▊| 88/90 [1:08:12<01:05, 32.69s/it] 99%|█████████▉| 89/90 [1:08:46<00:33, 33.29s/it]100%|██████████| 90/90 [1:08:55<00:00, 25.96s/it]{'loss': '0.2212', 'grad_norm': '1.232', 'learning_rate': '5.463e-07', 'epoch': '2.855', 'num_input_tokens_seen': 147648, 'train_runtime': '3994', 'train_tokens_per_second': '36.97'}
+[INFO|2026-11-08 23:49:31] llamafactory.train.callbacks:144 >> {'loss': 0.1907, 'learning_rate': 1.5229e-08, 'epoch': 3.00, 'throughput': 37.53}
+                                                 100%|██████████| 90/90 [1:08:55<00:00, 25.96s/it][INFO|trainer.py:3815] 2026-11-08 23:49:31,717 >> Saving model checkpoint to saves/Qwen3-1.7B-Base/lora/train_2026-11-08-22-39-50/checkpoint-90
+[INFO|configuration_utils.py:780] 2026-11-08 23:49:32,372 >> loading configuration file config.json from cache at /Users/senthilkumarpackiyam/.cache/huggingface/hub/models--Qwen--Qwen3-1.7B-Base/snapshots/ea980cb0a6c2ae4b936e82123acc929f1cec04c1/config.json
+[INFO|configuration_utils.py:856] 2026-11-08 23:49:32,375 >> Model config Qwen3Config {
+  "architectures": [
+    "Qwen3ForCausalLM"
+  ],
+  "attention_bias": false,
+  "attention_dropout": 0.0,
+  "bos_token_id": 151643,
+  "dtype": "bfloat16",
+  "eos_token_id": 151643,
+  "head_dim": 128,
+  "hidden_act": "silu",
+  "hidden_size": 2048,
+  "initializer_range": 0.02,
+  "intermediate_size": 6144,
+  "layer_types": [
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention"
+  ],
+  "max_position_embeddings": 32768,
+  "max_window_layers": 28,
+  "model_type": "qwen3",
+  "num_attention_heads": 16,
+  "num_hidden_layers": 28,
+  "num_key_value_heads": 8,
+  "pad_token_id": null,
+  "rms_norm_eps": 1e-06,
+  "rope_parameters": {
+    "rope_theta": 1000000,
+    "rope_type": "default"
+  },
+  "sliding_window": null,
+  "tie_word_embeddings": true,
+  "transformers_version": "5.8.0",
+  "use_cache": true,
+  "use_sliding_window": false,
+  "vocab_size": 151936
+}
+
+[INFO|tokenization_utils_base.py:3281] 2026-11-08 23:49:32,518 >> chat template saved in saves/Qwen3-1.7B-Base/lora/train_2026-11-08-22-39-50/checkpoint-90/chat_template.jinja
+[INFO|tokenization_utils_base.py:2114] 2026-11-08 23:49:32,519 >> tokenizer config file saved in saves/Qwen3-1.7B-Base/lora/train_2026-11-08-22-39-50/checkpoint-90/tokenizer_config.json
+[INFO|trainer.py:1823] 2026-11-08 23:49:32,893 >> 
+
+Training completed. Do not forget to share your model on huggingface.co/models =)
+
+
+                                                 100%|██████████| 90/90 [1:08:56<00:00, 25.96s/it]100%|██████████| 90/90 [1:08:56<00:00, 45.96s/it]
+[INFO|trainer.py:3815] 2026-11-08 23:49:32,894 >> Saving model checkpoint to saves/Qwen3-1.7B-Base/lora/train_2026-11-08-22-39-50
+[INFO|configuration_utils.py:780] 2026-11-08 23:49:33,400 >> loading configuration file config.json from cache at /Users/senthilkumarpackiyam/.cache/huggingface/hub/models--Qwen--Qwen3-1.7B-Base/snapshots/ea980cb0a6c2ae4b936e82123acc929f1cec04c1/config.json
+[INFO|configuration_utils.py:856] 2026-11-08 23:49:33,403 >> Model config Qwen3Config {
+  "architectures": [
+    "Qwen3ForCausalLM"
+  ],
+  "attention_bias": false,
+  "attention_dropout": 0.0,
+  "bos_token_id": 151643,
+  "dtype": "bfloat16",
+  "eos_token_id": 151643,
+  "head_dim": 128,
+  "hidden_act": "silu",
+  "hidden_size": 2048,
+  "initializer_range": 0.02,
+  "intermediate_size": 6144,
+  "layer_types": [
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention"
+  ],
+  "max_position_embeddings": 32768,
+  "max_window_layers": 28,
+  "model_type": "qwen3",
+  "num_attention_heads": 16,
+  "num_hidden_layers": 28,
+  "num_key_value_heads": 8,
+  "pad_token_id": null,
+  "rms_norm_eps": 1e-06,
+  "rope_parameters": {
+    "rope_theta": 1000000,
+    "rope_type": "default"
+  },
+  "sliding_window": null,
+  "tie_word_embeddings": true,
+  "transformers_version": "5.8.0",
+  "use_cache": true,
+  "use_sliding_window": false,
+  "vocab_size": 151936
+}
+
+[INFO|tokenization_utils_base.py:3281] 2026-11-08 23:49:33,507 >> chat template saved in saves/Qwen3-1.7B-Base/lora/train_2026-11-08-22-39-50/chat_template.jinja
+[INFO|tokenization_utils_base.py:2114] 2026-11-08 23:49:33,508 >> tokenizer config file saved in saves/Qwen3-1.7B-Base/lora/train_2026-11-08-22-39-50/tokenizer_config.json
+{'loss': '0.1907', 'grad_norm': '2.595', 'learning_rate': '1.523e-08', 'epoch': '3', 'num_input_tokens_seen': 155200, 'train_runtime': '4136', 'train_tokens_per_second': '37.53'}
+{'train_runtime': '4137', 'train_samples_per_second': '0.339', 'train_steps_per_second': '0.022', 'train_loss': '0.8842', 'epoch': '3', 'num_input_tokens_seen': 155200}
+***** train metrics *****
+  epoch                    =        3.0
+  num_input_tokens_seen    =     155200
+  total_flos               =  1229866GF
+  train_loss               =     0.8842
+  train_runtime            = 1:08:56.80
+  train_samples_per_second =      0.339
+  train_steps_per_second   =      0.022
+Figure saved at: saves/Qwen3-1.7B-Base/lora/train_2026-11-08-22-39-50/training_loss.png
+[WARNING|2026-11-08 23:49:33] llamafactory.extras.ploting:149 >> No metric eval_loss to plot.
+[WARNING|2026-11-08 23:49:33] llamafactory.extras.ploting:149 >> No metric eval_accuracy to plot.
+[INFO|modelcard.py:263] 2026-11-08 23:49:33,798 >> Dropping the following result as it does not have all the necessary fields:
+{'task': {'name': 'Causal Language Modeling', 'type': 'text-generation'}}

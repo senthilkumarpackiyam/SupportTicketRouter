@@ -6,3 +6,4 @@ seaborn
 jupyter
 ipykernel
 nbconvert
+playwright==1.64.1      # drives LLaMA Board in a browser (then: playwright install chromium)

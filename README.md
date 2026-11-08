@@ -55,6 +55,8 @@ Colab-ready notebook is also included so the run can be repeated on a T4.
 │   ├── check_env.py                   # Phase 1 environment / accelerator check
 │   ├── prepare_dataset.py             # Phase 2 split + ShareGPT + dataset_info.json
 │   ├── data_report.py                 # Phase 2 balance, leakage, LLaMA-Factory template check
+│   ├── llamaboard_train.py            # Phase 3 drives LLaMA Board's Train tab (Playwright)
+│   ├── llamaboard_chat.py             # Phase 3 loads the adapter in LLaMA Board's Chat tab
 │   └── viz_style.py                   # one chart style for all figures
 ├── configs/                           # LLaMA Board training args          (Phase 3)
 ├── adapters/                          # trained LoRA adapter               (Phase 3)
@@ -81,7 +83,7 @@ PEFT 0.18.1 · Accelerate 1.11.0 · Gradio 5.50.0 · Python 3.11.
 
 - [x] **Phase 1: Setup:** environment, LLaMA-Factory, base model, repo scaffold → [notes](docs/PHASE1_SETUP.md)
 - [x] **Phase 2: Prepare dataset:** stratified split, ShareGPT JSON, `dataset_info.json` → [notes](docs/PHASE2_DATASET.md)
-- [ ] **Phase 3: Fine-tune via LLaMA Board:** LoRA on Qwen3-1.7B-Base
+- [x] **Phase 3: Fine-tune via LLaMA Board:** LoRA on Qwen3-1.7B-Base, 90 steps, loss 7.16 → 0.19 in 69 min → [notes](docs/PHASE3_TRAINING.md)
 - [ ] **Phase 4: Review training:** loss curve
 - [ ] **Phase 5: Merge + smoke test:** baseline, merged model, `classify()`
 - [ ] **Phase 6: Evaluate + compare:** report, confusion matrix, baseline vs fine-tuned
@@ -89,10 +91,12 @@ PEFT 0.18.1 · Accelerate 1.11.0 · Gradio 5.50.0 · Python 3.11.
 
 ## Key findings so far
 
-- **Template trap (Phase 2):** with LLaMA Board's defaults for Qwen3-Base (template `qwen3`,
-  thinking on), every trained answer starts with an empty `<think></think>` block. The course's
-  `classify()` would therefore label **every** ticket `Support general`. Fixed at inference
-  time with `enable_thinking=False`, verified token-for-token. [Details](docs/PHASE2_DATASET.md#️-template-finding-the-courses-classify-would-fail-with-these-defaults)
+- **Chat template (Phases 2–3):** for a *Base* model LLaMA Board leaves the template at
+  `default` (`System:/Human:/Assistant:`). LLaMA-Factory then rewrites the tokenizer's chat
+  template to match and saves it with the adapter, so inference must load the tokenizer **from the
+  adapter folder**, as the course notebook does. Picking `qwen3` by hand instead would make every
+  answer start with an empty `<think></think>` block, and the course's `classify()` would label
+  **every** ticket `Support general`. [Details](docs/PHASE2_DATASET.md#which-chat-template-does-llama-board-use-corrected-in-phase-3)
 - **Course notebook bug:** `classification_report(..., target_names=LABEL_TOKENS)` is called
   without `labels=`, so sklearn sorts the classes alphabetically and the names are attached to
   the wrong rows (also in the per-class F1 chart). Fixed in this project by passing `labels=`.

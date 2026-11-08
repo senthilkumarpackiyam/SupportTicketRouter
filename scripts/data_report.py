@@ -3,9 +3,9 @@
 Checks
   1. class balance per split (is the stratified split really stratified?)
   2. leakage: exact overlap and near-duplicates between train and validation (TF-IDF cosine)
-  3. the dataset loads through LLaMA-Factory's own SFT pipeline with the `qwen3` template that
-     LLaMA Board auto-selects for Qwen3-1.7B-Base: exact token sequences, which tokens carry loss,
-     sequence lengths (to choose cutoff_len)
+  3. the dataset loads through LLaMA-Factory's own SFT pipeline, compared for three chat templates
+     (`default` = what LLaMA Board leaves selected for a Base model, `qwen3`, `qwen3_nothink`):
+     exact token sequences, which tokens carry loss, sequence lengths (to choose cutoff_len)
   4. template alignment: the training prompt vs Hugging Face `apply_chat_template` (what the
      course's classify() uses at inference time)
 
@@ -79,8 +79,8 @@ def leakage(df_train: pd.DataFrame, df_val: pd.DataFrame) -> dict:
     }
 
 
-def llama_factory_pipeline_check() -> dict:
-    """Tokenise TRAIN.json exactly the way LLaMA Board's training run will."""
+def llama_factory_pipeline_check(template_name: str, enable_thinking: bool = True) -> dict:
+    """Tokenise TRAIN.json exactly the way a LLaMA Board training run with this template will."""
     from llamafactory.data import get_dataset, get_template_and_fix_tokenizer
     from llamafactory.hparams import get_train_args
     from llamafactory.model import load_tokenizer
@@ -89,8 +89,8 @@ def llama_factory_pipeline_check() -> dict:
         model_args, data_args, training_args, _, _ = get_train_args(dict(
             stage="sft", do_train=True, model_name_or_path=BASE_MODEL, finetuning_type="lora",
             dataset=DATASET_NAME, dataset_dir=str(LLAMA_FACTORY_DIR / "data"),
-            template="qwen3",          # what LLaMA Board auto-selects for Qwen3-1.7B-Base
-            enable_thinking=True,      # LLaMA Board's default checkbox value
+            template=template_name,
+            enable_thinking=enable_thinking,  # LLaMA Board's checkbox defaults to True
             cutoff_len=2048,           # LLaMA Board's default
             output_dir=tmp, overwrite_cache=True, report_to="none",
         ))
@@ -114,9 +114,14 @@ def llama_factory_pipeline_check() -> dict:
     hf_default = tok.apply_chat_template(msgs, tokenize=False, add_generation_prompt=True)
     hf_nothink = tok.apply_chat_template(msgs, tokenize=False, add_generation_prompt=True, enable_thinking=False)
     think_ids = tok.convert_tokens_to_ids(["<think>", "</think>"])
+    # The model's ORIGINAL chat template (fresh tokenizer, untouched by LLaMA-Factory).
+    from transformers import AutoTokenizer
+    orig_prompt = AutoTokenizer.from_pretrained(BASE_MODEL).apply_chat_template(
+        msgs, tokenize=False, add_generation_prompt=True
+    )
 
     return {
-        "template": "qwen3", "enable_thinking": True,
+        "template": template_name, "enable_thinking": enable_thinking,
         "num_examples": len(ds),
         "sequence_tokens": {"min": int(lengths.min()), "median": int(np.median(lengths)),
                             "p95": int(np.percentile(lengths, 95)), "max": int(lengths.max())},
@@ -125,8 +130,13 @@ def llama_factory_pipeline_check() -> dict:
         "example0_response_trained": lf_response,
         "hf_prompt_default": hf_default,
         "hf_prompt_enable_thinking_false": hf_nothink,
+        # LLaMA-Factory may overwrite tokenizer.chat_template with the training template
+        # (replace_jinja_template); that tokenizer is saved next to the adapter.
+        "tokenizer_chat_template_replaced_by_llamafactory": bool(template.replace_jinja_template),
+        "check_lf_prompt_equals_original_qwen_template": lf_prompt == orig_prompt,
         "check_lf_prompt_equals_hf_default": lf_prompt == hf_default,
         "check_lf_full_starts_with_hf_nothink": (lf_prompt + lf_response).startswith(hf_nothink),
+        "check_lf_response_is_bare_label": lf_response.strip().removesuffix(tok.eos_token).strip() == train0[2]["content"],
         "think_tokens_are_special": [tok.convert_ids_to_tokens(i) in tok.all_special_tokens for i in think_ids],
         "decoded_response_with_skip_special_tokens": tok.decode(ids[first_loss:], skip_special_tokens=True),
     }
@@ -167,11 +177,17 @@ def main() -> None:
     leak = leakage(df_train, df_val)
     print("Leakage:", json.dumps({k: v for k, v in leak.items() if k != "most_similar_pairs"}, indent=2), "\n")
 
-    lf = llama_factory_pipeline_check()
-    print("LLaMA-Factory pipeline:", json.dumps({k: v for k, v in lf.items() if not k.startswith(("example0", "hf_prompt"))}, indent=2))
-    print("\n--- example 0: prompt (no loss) ---\n" + lf["example0_prompt_masked"])
-    print("--- example 0: response (loss) ---\n" + repr(lf["example0_response_trained"]))
-    print("--- HF apply_chat_template(enable_thinking=False) ends with ---\n" + repr(lf["hf_prompt_enable_thinking_false"][-60:]))
+    # "default"      = what LLaMA Board actually leaves selected for a *Base* model (it only auto-fills
+    #                  templates for -Chat/-Instruct/-Thinking models)
+    # "qwen3"        = Qwen3 reasoning template (adds an empty <think></think> block to every answer)
+    # "qwen3_nothink"= Qwen3 ChatML without thinking (original Qwen format, bare-label answers)
+    # Training used LLaMA Board's choice, "default" (see docs/PHASE2_DATASET.md).
+    lf = {name: llama_factory_pipeline_check(name) for name in ("default", "qwen3", "qwen3_nothink")}
+    for name, res in lf.items():
+        print(f"\n===== template={name} =====")
+        print(json.dumps({k: v for k, v in res.items() if k.startswith("check") or k == "sequence_tokens"}, indent=2))
+        print("--- prompt (no loss) ---\n" + res["example0_prompt_masked"])
+        print("--- response (loss) ---\n" + repr(res["example0_response_trained"]))
 
     RESULTS_DIR.mkdir(exist_ok=True)
     plot_class_distribution(tbl, RESULTS_DIR / "phase2_class_distribution.png")

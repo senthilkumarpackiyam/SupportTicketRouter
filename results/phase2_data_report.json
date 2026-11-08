@@ -106,29 +106,92 @@
     ]
   },
   "llama_factory_pipeline": {
-    "template": "qwen3",
-    "enable_thinking": true,
-    "num_examples": 468,
-    "sequence_tokens": {
-      "min": 90,
-      "median": 107,
-      "p95": 126,
-      "max": 190
+    "default": {
+      "template": "default",
+      "enable_thinking": true,
+      "num_examples": 468,
+      "sequence_tokens": {
+        "min": 83,
+        "median": 100,
+        "p95": 119,
+        "max": 183
+      },
+      "loss_tokens_per_example": {
+        "min": 3,
+        "max": 6
+      },
+      "example0_prompt_masked": "System: You are an IT helpdesk ticket routing assistant. Given a support ticket, respond with exactly one of the following categories: Support general, Fileservice, O365, EOL, Software, Active Directory, Computer-Services.<|endoftext|>\nHuman: Support Ticket: Hi, could you please create a light external user account for someone outside our organisation? They'll just need email access and basic system access to get started.<|endoftext|>\nAssistant:",
+      "example0_response_trained": "Support general<|endoftext|>\n",
+      "hf_prompt_default": "System: You are an IT helpdesk ticket routing assistant. Given a support ticket, respond with exactly one of the following categories: Support general, Fileservice, O365, EOL, Software, Active Directory, Computer-Services.<|endoftext|>\nHuman: Support Ticket: Hi, could you please create a light external user account for someone outside our organisation? They'll just need email access and basic system access to get started.<|endoftext|>\nAssistant:",
+      "hf_prompt_enable_thinking_false": "System: You are an IT helpdesk ticket routing assistant. Given a support ticket, respond with exactly one of the following categories: Support general, Fileservice, O365, EOL, Software, Active Directory, Computer-Services.<|endoftext|>\nHuman: Support Ticket: Hi, could you please create a light external user account for someone outside our organisation? They'll just need email access and basic system access to get started.<|endoftext|>\nAssistant:",
+      "tokenizer_chat_template_replaced_by_llamafactory": true,
+      "check_lf_prompt_equals_original_qwen_template": false,
+      "check_lf_prompt_equals_hf_default": true,
+      "check_lf_full_starts_with_hf_nothink": true,
+      "check_lf_response_is_bare_label": true,
+      "think_tokens_are_special": [
+        false,
+        false
+      ],
+      "decoded_response_with_skip_special_tokens": "Support general\n"
     },
-    "loss_tokens_per_example": {
-      "min": 7,
-      "max": 10
+    "qwen3": {
+      "template": "qwen3",
+      "enable_thinking": true,
+      "num_examples": 468,
+      "sequence_tokens": {
+        "min": 90,
+        "median": 107,
+        "p95": 126,
+        "max": 190
+      },
+      "loss_tokens_per_example": {
+        "min": 7,
+        "max": 10
+      },
+      "example0_prompt_masked": "<|im_start|>system\nYou are an IT helpdesk ticket routing assistant. Given a support ticket, respond with exactly one of the following categories: Support general, Fileservice, O365, EOL, Software, Active Directory, Computer-Services.<|im_end|>\n<|im_start|>user\nSupport Ticket: Hi, could you please create a light external user account for someone outside our organisation? They'll just need email access and basic system access to get started.<|im_end|>\n<|im_start|>assistant\n",
+      "example0_response_trained": "<think>\n\n</think>\n\nSupport general<|im_end|>\n",
+      "hf_prompt_default": "<|im_start|>system\nYou are an IT helpdesk ticket routing assistant. Given a support ticket, respond with exactly one of the following categories: Support general, Fileservice, O365, EOL, Software, Active Directory, Computer-Services.<|im_end|>\n<|im_start|>user\nSupport Ticket: Hi, could you please create a light external user account for someone outside our organisation? They'll just need email access and basic system access to get started.<|im_end|>\n<|im_start|>assistant\n",
+      "hf_prompt_enable_thinking_false": "<|im_start|>system\nYou are an IT helpdesk ticket routing assistant. Given a support ticket, respond with exactly one of the following categories: Support general, Fileservice, O365, EOL, Software, Active Directory, Computer-Services.<|im_end|>\n<|im_start|>user\nSupport Ticket: Hi, could you please create a light external user account for someone outside our organisation? They'll just need email access and basic system access to get started.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+      "tokenizer_chat_template_replaced_by_llamafactory": false,
+      "check_lf_prompt_equals_original_qwen_template": true,
+      "check_lf_prompt_equals_hf_default": true,
+      "check_lf_full_starts_with_hf_nothink": true,
+      "check_lf_response_is_bare_label": false,
+      "think_tokens_are_special": [
+        false,
+        false
+      ],
+      "decoded_response_with_skip_special_tokens": "<think>\n\n</think>\n\nSupport general\n"
     },
-    "example0_prompt_masked": "<|im_start|>system\nYou are an IT helpdesk ticket routing assistant. Given a support ticket, respond with exactly one of the following categories: Support general, Fileservice, O365, EOL, Software, Active Directory, Computer-Services.<|im_end|>\n<|im_start|>user\nSupport Ticket: Hi, could you please create a light external user account for someone outside our organisation? They'll just need email access and basic system access to get started.<|im_end|>\n<|im_start|>assistant\n",
-    "example0_response_trained": "<think>\n\n</think>\n\nSupport general<|im_end|>\n",
-    "hf_prompt_default": "<|im_start|>system\nYou are an IT helpdesk ticket routing assistant. Given a support ticket, respond with exactly one of the following categories: Support general, Fileservice, O365, EOL, Software, Active Directory, Computer-Services.<|im_end|>\n<|im_start|>user\nSupport Ticket: Hi, could you please create a light external user account for someone outside our organisation? They'll just need email access and basic system access to get started.<|im_end|>\n<|im_start|>assistant\n",
-    "hf_prompt_enable_thinking_false": "<|im_start|>system\nYou are an IT helpdesk ticket routing assistant. Given a support ticket, respond with exactly one of the following categories: Support general, Fileservice, O365, EOL, Software, Active Directory, Computer-Services.<|im_end|>\n<|im_start|>user\nSupport Ticket: Hi, could you please create a light external user account for someone outside our organisation? They'll just need email access and basic system access to get started.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
-    "check_lf_prompt_equals_hf_default": true,
-    "check_lf_full_starts_with_hf_nothink": true,
-    "think_tokens_are_special": [
-      false,
-      false
-    ],
-    "decoded_response_with_skip_special_tokens": "<think>\n\n</think>\n\nSupport general\n"
+    "qwen3_nothink": {
+      "template": "qwen3_nothink",
+      "enable_thinking": true,
+      "num_examples": 468,
+      "sequence_tokens": {
+        "min": 86,
+        "median": 103,
+        "p95": 122,
+        "max": 186
+      },
+      "loss_tokens_per_example": {
+        "min": 3,
+        "max": 6
+      },
+      "example0_prompt_masked": "<|im_start|>system\nYou are an IT helpdesk ticket routing assistant. Given a support ticket, respond with exactly one of the following categories: Support general, Fileservice, O365, EOL, Software, Active Directory, Computer-Services.<|im_end|>\n<|im_start|>user\nSupport Ticket: Hi, could you please create a light external user account for someone outside our organisation? They'll just need email access and basic system access to get started.<|im_end|>\n<|im_start|>assistant\n",
+      "example0_response_trained": "Support general<|im_end|>\n",
+      "hf_prompt_default": "<|im_start|>system\nYou are an IT helpdesk ticket routing assistant. Given a support ticket, respond with exactly one of the following categories: Support general, Fileservice, O365, EOL, Software, Active Directory, Computer-Services.<|im_end|>\n<|im_start|>user\nSupport Ticket: Hi, could you please create a light external user account for someone outside our organisation? They'll just need email access and basic system access to get started.<|im_end|>\n<|im_start|>assistant\n",
+      "hf_prompt_enable_thinking_false": "<|im_start|>system\nYou are an IT helpdesk ticket routing assistant. Given a support ticket, respond with exactly one of the following categories: Support general, Fileservice, O365, EOL, Software, Active Directory, Computer-Services.<|im_end|>\n<|im_start|>user\nSupport Ticket: Hi, could you please create a light external user account for someone outside our organisation? They'll just need email access and basic system access to get started.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+      "tokenizer_chat_template_replaced_by_llamafactory": false,
+      "check_lf_prompt_equals_original_qwen_template": true,
+      "check_lf_prompt_equals_hf_default": true,
+      "check_lf_full_starts_with_hf_nothink": false,
+      "check_lf_response_is_bare_label": true,
+      "think_tokens_are_special": [
+        false,
+        false
+      ],
+      "decoded_response_with_skip_special_tokens": "Support general\n"
+    }
   }
 }

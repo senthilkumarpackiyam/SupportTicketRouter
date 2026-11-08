@@ -1,0 +1,20 @@
+[
+  {
+    "ticket": "Please create a new user account for the new employee starting Monday.",
+    "expected": "Active Directory",
+    "answer": "Support general",
+    "ok": false
+  },
+  {
+    "ticket": "Outlook keeps asking me to re-enter my password and Teams won't sync.",
+    "expected": "O365",
+    "answer": "O365",
+    "ok": true
+  },
+  {
+    "ticket": "We're ready to retire [SERVER] — please remove it from monitoring.",
+    "expected": "EOL",
+    "answer": "EOL",
+    "ok": true
+  }
+]
