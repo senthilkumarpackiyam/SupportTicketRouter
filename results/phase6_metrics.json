@@ -1,0 +1,318 @@
+{
+  "n_val": 117,
+  "finetuned": {
+    "accuracy": 0.7265,
+    "macro_f1": 0.6795,
+    "weighted_f1": 0.7172,
+    "per_class": {
+      "Support general": {
+        "precision": 0.5814,
+        "recall": 0.8333,
+        "f1-score": 0.6849,
+        "support": 30.0
+      },
+      "Fileservice": {
+        "precision": 0.92,
+        "recall": 0.8214,
+        "f1-score": 0.8679,
+        "support": 28.0
+      },
+      "O365": {
+        "precision": 0.6842,
+        "recall": 0.7222,
+        "f1-score": 0.7027,
+        "support": 18.0
+      },
+      "EOL": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 12.0
+      },
+      "Software": {
+        "precision": 0.7143,
+        "recall": 0.4167,
+        "f1-score": 0.5263,
+        "support": 12.0
+      },
+      "Active Directory": {
+        "precision": 0.5,
+        "recall": 0.2222,
+        "f1-score": 0.3077,
+        "support": 9.0
+      },
+      "Computer-Services": {
+        "precision": 0.7143,
+        "recall": 0.625,
+        "f1-score": 0.6667,
+        "support": 8.0
+      }
+    },
+    "clean_label_outputs": 117
+  },
+  "baseline": {
+    "accuracy": 0.2479,
+    "macro_f1": 0.0779,
+    "per_class_f1": {
+      "Support general": 0.3916,
+      "Fileservice": 0.0,
+      "O365": 0.0,
+      "EOL": 0.1538,
+      "Software": 0.0,
+      "Active Directory": 0.0,
+      "Computer-Services": 0.0
+    }
+  },
+  "delta_accuracy_pct_points": 47.9,
+  "active_directory_recall": 0.2222,
+  "fileservice_recall": 0.8214,
+  "confusion_matrix": {
+    "labels": [
+      "Support general",
+      "Fileservice",
+      "O365",
+      "EOL",
+      "Software",
+      "Active Directory",
+      "Computer-Services"
+    ],
+    "counts": [
+      [
+        25,
+        0,
+        2,
+        0,
+        1,
+        1,
+        1
+      ],
+      [
+        4,
+        23,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      [
+        4,
+        1,
+        13,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        12,
+        0,
+        0,
+        0
+      ],
+      [
+        3,
+        1,
+        3,
+        0,
+        5,
+        0,
+        0
+      ],
+      [
+        5,
+        0,
+        1,
+        0,
+        0,
+        2,
+        1
+      ],
+      [
+        2,
+        0,
+        0,
+        0,
+        1,
+        0,
+        5
+      ]
+    ]
+  },
+  "confidence_thresholds": [
+    {
+      "threshold": 0.0,
+      "share_auto_routed": 1.0,
+      "accuracy_auto_routed": 0.7265,
+      "tickets_to_human": 0
+    },
+    {
+      "threshold": 0.5,
+      "share_auto_routed": 0.8034,
+      "accuracy_auto_routed": 0.7553,
+      "tickets_to_human": 23
+    },
+    {
+      "threshold": 0.6,
+      "share_auto_routed": 0.7179,
+      "accuracy_auto_routed": 0.7619,
+      "tickets_to_human": 33
+    },
+    {
+      "threshold": 0.7,
+      "share_auto_routed": 0.5726,
+      "accuracy_auto_routed": 0.791,
+      "tickets_to_human": 50
+    },
+    {
+      "threshold": 0.8,
+      "share_auto_routed": 0.4359,
+      "accuracy_auto_routed": 0.8627,
+      "tickets_to_human": 66
+    },
+    {
+      "threshold": 0.85,
+      "share_auto_routed": 0.3419,
+      "accuracy_auto_routed": 0.875,
+      "tickets_to_human": 77
+    },
+    {
+      "threshold": 0.9,
+      "share_auto_routed": 0.2137,
+      "accuracy_auto_routed": 0.96,
+      "tickets_to_human": 92
+    },
+    {
+      "threshold": 0.95,
+      "share_auto_routed": 0.1111,
+      "accuracy_auto_routed": 0.9231,
+      "tickets_to_human": 104
+    }
+  ],
+  "context_baselines": {
+    "majority class": {
+      "accuracy": 0.2564,
+      "macro_f1": 0.0583
+    },
+    "TF-IDF 1-nearest-neighbour": {
+      "accuracy": 0.641,
+      "macro_f1": 0.6014
+    },
+    "TF-IDF + logistic regression": {
+      "accuracy": 0.6923,
+      "macro_f1": 0.6589
+    }
+  },
+  "baseline_variants": {
+    "default (course) | letters plain": {
+      "accuracy": 0.2479,
+      "macro_f1": 0.1639,
+      "share_predicted_A": 0.419
+    },
+    "default (course) | letters spaced": {
+      "accuracy": 0.2479,
+      "macro_f1": 0.0779,
+      "share_predicted_A": 0.966
+    },
+    "qwen original | letters plain": {
+      "accuracy": 0.2564,
+      "macro_f1": 0.0672,
+      "share_predicted_A": 0.949
+    },
+    "qwen original | letters spaced": {
+      "accuracy": 0.3162,
+      "macro_f1": 0.1444,
+      "share_predicted_A": 0.769
+    }
+  },
+  "latency": {
+    "device": "mps",
+    "dtype": "torch.float16",
+    "median_ms": 277.5,
+    "p95_ms": 363.3,
+    "mean_ms": 290.5,
+    "cpu_sample": {
+      "tickets": 10,
+      "dtype": "float32",
+      "median_ms": 960.6,
+      "p95_ms": 1285.9
+    }
+  },
+  "course_examples": [
+    {
+      "i": 0,
+      "true": "Fileservice",
+      "pred": "Fileservice",
+      "confidence": 0.3863
+    },
+    {
+      "i": 10,
+      "true": "Active Directory",
+      "pred": "Support general",
+      "confidence": 0.6439
+    },
+    {
+      "i": 20,
+      "true": "Computer-Services",
+      "pred": "Computer-Services",
+      "confidence": 0.4746
+    },
+    {
+      "i": 30,
+      "true": "Fileservice",
+      "pred": "Fileservice",
+      "confidence": 0.9589
+    }
+  ],
+  "errors_vs_nearest_training_ticket": {
+    "errors": 32,
+    "model_answer_equals_nearest_train_label": 6,
+    "nearest_train_label_equals_true_label": 11,
+    "median_similarity_to_nearest_train": 0.345
+  },
+  "top_confusions": [
+    {
+      "true": "Active Directory",
+      "pred": "Support general",
+      "count": 5
+    },
+    {
+      "true": "Fileservice",
+      "pred": "Support general",
+      "count": 4
+    },
+    {
+      "true": "O365",
+      "pred": "Support general",
+      "count": 4
+    },
+    {
+      "true": "Software",
+      "pred": "O365",
+      "count": 3
+    },
+    {
+      "true": "Software",
+      "pred": "Support general",
+      "count": 3
+    },
+    {
+      "true": "Computer-Services",
+      "pred": "Support general",
+      "count": 2
+    },
+    {
+      "true": "Support general",
+      "pred": "O365",
+      "count": 2
+    },
+    {
+      "true": "Active Directory",
+      "pred": "Computer-Services",
+      "count": 1
+    }
+  ]
+}

@@ -1,0 +1,149 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Evaluated 117 samples.
+                   precision    recall  f1-score   support
+
+  Support general      0.581     0.833     0.685        30
+      Fileservice      0.920     0.821     0.868        28
+             O365      0.684     0.722     0.703        18
+              EOL      1.000     1.000     1.000        12
+         Software      0.714     0.417     0.526        12
+ Active Directory      0.500     0.222     0.308         9
+Computer-Services      0.714     0.625     0.667         8
+
+         accuracy                          0.726       117
+        macro avg      0.731     0.663     0.679       117
+     weighted avg      0.738     0.726     0.717       117
+
+Active Directory recall : 22.2%
+Fileservice recall      : 82.1%
+Base accuracy  : 24.8%
+Fine-tuned acc : 72.6%
+Delta          : +47.9%
+ threshold  share_auto_routed  accuracy_auto_routed  tickets_to_human
+      0.00              1.000                 0.726                 0
+      0.50              0.803                 0.755                23
+      0.60              0.718                 0.762                33
+      0.70              0.573                 0.791                50
+      0.80              0.436                 0.863                66
+      0.85              0.342                 0.875                77
+      0.90              0.214                 0.960                92
+      0.95              0.111                 0.923               104
+{
+  "top_confusions": [
+    {
+      "true": "Active Directory",
+      "pred": "Support general",
+      "count": 5
+    },
+    {
+      "true": "Fileservice",
+      "pred": "Support general",
+      "count": 4
+    },
+    {
+      "true": "O365",
+      "pred": "Support general",
+      "count": 4
+    },
+    {
+      "true": "Software",
+      "pred": "O365",
+      "count": 3
+    },
+    {
+      "true": "Software",
+      "pred": "Support general",
+      "count": 3
+    },
+    {
+      "true": "Computer-Services",
+      "pred": "Support general",
+      "count": 2
+    },
+    {
+      "true": "Support general",
+      "pred": "O365",
+      "count": 2
+    },
+    {
+      "true": "Active Directory",
+      "pred": "Computer-Services",
+      "count": 1
+    }
+  ],
+  "context_baselines": {
+    "majority class": {
+      "accuracy": 0.2564,
+      "macro_f1": 0.0583
+    },
+    "TF-IDF 1-nearest-neighbour": {
+      "accuracy": 0.641,
+      "macro_f1": 0.6014
+    },
+    "TF-IDF + logistic regression": {
+      "accuracy": 0.6923,
+      "macro_f1": 0.6589
+    }
+  },
+  "baseline_variants": {
+    "default (course) | letters plain": {
+      "accuracy": 0.2479,
+      "macro_f1": 0.1639,
+      "share_predicted_A": 0.419
+    },
+    "default (course) | letters spaced": {
+      "accuracy": 0.2479,
+      "macro_f1": 0.0779,
+      "share_predicted_A": 0.966
+    },
+    "qwen original | letters plain": {
+      "accuracy": 0.2564,
+      "macro_f1": 0.0672,
+      "share_predicted_A": 0.949
+    },
+    "qwen original | letters spaced": {
+      "accuracy": 0.3162,
+      "macro_f1": 0.1444,
+      "share_predicted_A": 0.769
+    }
+  },
+  "latency": {
+    "device": "mps",
+    "dtype": "torch.float16",
+    "median_ms": 277.5,
+    "p95_ms": 363.3,
+    "mean_ms": 290.5,
+    "cpu_sample": {
+      "tickets": 10,
+      "dtype": "float32",
+      "median_ms": 960.6,
+      "p95_ms": 1285.9
+    }
+  },
+  "course_examples": [
+    {
+      "i": 0,
+      "true": "Fileservice",
+      "pred": "Fileservice",
+      "confidence": 0.3863
+    },
+    {
+      "i": 10,
+      "true": "Active Directory",
+      "pred": "Support general",
+      "confidence": 0.6439
+    },
+    {
+      "i": 20,
+      "true": "Computer-Services",
+      "pred": "Computer-Services",
+      "confidence": 0.4746
+    },
+    {
+      "i": 30,
+      "true": "Fileservice",
+      "pred": "Fileservice",
+      "confidence": 0.9589
+    }
+  ]
+}

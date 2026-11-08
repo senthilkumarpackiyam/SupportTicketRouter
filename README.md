@@ -49,6 +49,7 @@ Colab-ready notebook is also included so the run can be repeated on a T4.
 │   ├── raw/support_tickets.csv        # course dataset (585 rows, 7 labels)
 │   └── processed/                     # TRAIN.json (ShareGPT), train/val split CSVs
 ├── notebooks/
+│   ├── SupportTicketRouter_end_to_end.ipynb  # course notebook, completed + executed (Colab-ready)
 │   └── original/                      # the unmodified course notebook
 ├── scripts/
 │   ├── router_common.py               # shared labels, system prompt, paths
@@ -60,6 +61,7 @@ Colab-ready notebook is also included so the run can be repeated on a T4.
 │   ├── phase4_loss_curve.py           # Phase 4 loss curve + convergence check
 │   ├── router_inference.py            # course baseline (A–G) + classify(), shared by 5–6
 │   ├── phase5_merge_and_smoke.py      # Phase 5 baseline → merge → smoke test
+│   ├── phase6_evaluate.py             # Phase 6 full evaluation + charts
 │   └── viz_style.py                   # one chart style for all figures
 ├── configs/                           # LLaMA Board training args          (Phase 3)
 ├── adapters/                          # trained LoRA adapter               (Phase 3)
@@ -90,7 +92,7 @@ PEFT 0.18.1 · Accelerate 1.11.0 · Gradio 5.50.0 · Python 3.11.
 - [x] **Phase 3: Fine-tune via LLaMA Board:** LoRA on Qwen3-1.7B-Base, 90 steps, loss 7.16 → 0.19 in 69 min → [notes](docs/PHASE3_TRAINING.md)
 - [x] **Phase 4: Review training:** loss curve falls 97 % and is flat in epoch 3 → no retrain → [notes](docs/PHASE4_TRAINING_REVIEW.md)
 - [x] **Phase 5: Merge + smoke test:** baseline 24.8 %, adapter merged (verified), course smoke test 4/5 → [notes](docs/PHASE5_MERGE_SMOKE.md)
-- [ ] **Phase 6: Evaluate + compare:** report, confusion matrix, baseline vs fine-tuned
+- [x] **Phase 6: Evaluate + compare:** 24.8 % → 72.6 % accuracy; report, confusion matrix, comparison, thresholds, latency → [notes](docs/PHASE6_EVALUATION.md)
 - [ ] **Phase 7: Demo video**
 
 ## Key findings so far
@@ -107,7 +109,44 @@ PEFT 0.18.1 · Accelerate 1.11.0 · Gradio 5.50.0 · Python 3.11.
 
 ## Results
 
-_To be filled in after Phase 6._
+Evaluated on the **117 held-out validation tickets** (stratified 20 %, never seen in training).
+
+| | Base Qwen3-1.7B (zero-shot A–G) | **Fine-tuned (LoRA via LLaMA Board)** |
+|---|---|---|
+| Accuracy | 24.8 % | **72.6 %** (+47.9 points) |
+| Macro F1 | 0.078 | **0.679** |
+| Course smoke test | 2 / 5 | **4 / 5** |
+| Latency (Apple M2 GPU) | | 278 ms median per ticket |
+
+![Baseline vs fine-tuned](results/phase6_baseline_vs_finetuned.png)
+
+| Per class (fine-tuned) | Precision | Recall | F1 | n |
+|---|---|---|---|---|
+| EOL | 1.00 | 1.00 | 1.00 | 12 |
+| Fileservice | 0.92 | 0.82 | 0.87 | 28 |
+| O365 | 0.68 | 0.72 | 0.70 | 18 |
+| Support general | 0.58 | 0.83 | 0.69 | 30 |
+| Computer-Services | 0.71 | 0.63 | 0.67 | 8 |
+| Software | 0.71 | 0.42 | 0.53 | 12 |
+| Active Directory | 0.50 | **0.22** | 0.31 | 9 |
+
+<img src="results/phase6_confusion_matrix.png" width="560" alt="Confusion matrix">
+
+**What the numbers say**
+
+- **Fine-tuning works:** the untrained model picks the first option for almost every ticket.
+  After a 69-minute LoRA run that trains 0.5 % of the weights, the model routes 73 % of unseen
+  tickets correctly and always answers with a clean label.
+- **The weak spot is Active Directory (recall 2/9).** Generic tickets drift to the catch-all
+  `Support general` (18 of 32 errors). Part of it is the data: near-identical account requests
+  are labelled three different ways in training.
+  [Details and next steps](docs/PHASE6_EVALUATION.md#what-to-do-about-active-directory)
+- **Use the confidence score:** auto-routing only tickets with confidence ≥ 0.8 handles 44 % of the
+  volume at 86 % accuracy and leaves the rest for human triage.
+- **Honest context:** a TF-IDF + logistic-regression model reaches 69.2 % on the same split. With
+  117 tickets (±8 points), the LLM's lead isn't statistically meaningful. Proving its value would
+  need a larger, harder test set.
+- The baseline isn't a strawman: the best of four prompt/tokenisation variants reaches only 31.6 %.
 
 ## Credits
 

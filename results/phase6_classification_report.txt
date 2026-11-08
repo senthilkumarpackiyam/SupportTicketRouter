@@ -1,0 +1,42 @@
+Fine-tuned router, 117 held-out validation tickets
+classification_report(y_true, y_pred, labels=LABEL_TOKENS, target_names=LABEL_TOKENS)
+
+                   precision    recall  f1-score   support
+
+  Support general      0.581     0.833     0.685        30
+      Fileservice      0.920     0.821     0.868        28
+             O365      0.684     0.722     0.703        18
+              EOL      1.000     1.000     1.000        12
+         Software      0.714     0.417     0.526        12
+ Active Directory      0.500     0.222     0.308         9
+Computer-Services      0.714     0.625     0.667         8
+
+         accuracy                          0.726       117
+        macro avg      0.731     0.663     0.679       117
+     weighted avg      0.738     0.726     0.717       117
+
+
+---- For reference: the course cell's call WITHOUT labels= (row names are WRONG) ----
+sklearn sorts the classes alphabetically and attaches target_names in LABEL_TOKENS order:
+  row named 'Support general'     actually holds 'Active Directory'
+  row named 'Fileservice'         actually holds 'Computer-Services'
+  row named 'O365'                actually holds 'EOL'
+  row named 'EOL'                 actually holds 'Fileservice'
+  row named 'Software'            actually holds 'O365'
+  row named 'Active Directory'    actually holds 'Software'
+  row named 'Computer-Services'   actually holds 'Support general'
+
+                   precision    recall  f1-score   support
+
+  Support general      0.500     0.222     0.308         9
+      Fileservice      0.714     0.625     0.667         8
+             O365      1.000     1.000     1.000        12
+              EOL      0.920     0.821     0.868        28
+         Software      0.684     0.722     0.703        18
+ Active Directory      0.714     0.417     0.526        12
+Computer-Services      0.581     0.833     0.685        30
+
+         accuracy                          0.726       117
+        macro avg      0.731     0.663     0.679       117
+     weighted avg      0.738     0.726     0.717       117
+
