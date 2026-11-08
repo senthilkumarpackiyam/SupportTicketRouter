@@ -1,0 +1,134 @@
+{
+  "rows": {
+    "train": 468,
+    "val": 117
+  },
+  "class_balance": [
+    {
+      "label": "Support general",
+      "train": 120,
+      "val": 30,
+      "total": 150,
+      "share_of_all_%": 25.6,
+      "train_%": 25.6,
+      "val_%": 25.6
+    },
+    {
+      "label": "Fileservice",
+      "train": 110,
+      "val": 28,
+      "total": 138,
+      "share_of_all_%": 23.6,
+      "train_%": 23.5,
+      "val_%": 23.9
+    },
+    {
+      "label": "O365",
+      "train": 74,
+      "val": 18,
+      "total": 92,
+      "share_of_all_%": 15.7,
+      "train_%": 15.8,
+      "val_%": 15.4
+    },
+    {
+      "label": "EOL",
+      "train": 46,
+      "val": 12,
+      "total": 58,
+      "share_of_all_%": 9.9,
+      "train_%": 9.8,
+      "val_%": 10.3
+    },
+    {
+      "label": "Software",
+      "train": 46,
+      "val": 12,
+      "total": 58,
+      "share_of_all_%": 9.9,
+      "train_%": 9.8,
+      "val_%": 10.3
+    },
+    {
+      "label": "Active Directory",
+      "train": 39,
+      "val": 9,
+      "total": 48,
+      "share_of_all_%": 8.2,
+      "train_%": 8.3,
+      "val_%": 7.7
+    },
+    {
+      "label": "Computer-Services",
+      "train": 33,
+      "val": 8,
+      "total": 41,
+      "share_of_all_%": 7.0,
+      "train_%": 7.1,
+      "val_%": 6.8
+    }
+  ],
+  "max_class_share_drift_train_vs_val_pct_points": 0.6,
+  "system_prompt": "You are an IT helpdesk ticket routing assistant. Given a support ticket, respond with exactly one of the following categories: Support general, Fileservice, O365, EOL, Software, Active Directory, Computer-Services.",
+  "user_prompt_format": "Support Ticket: <ticket text>",
+  "leakage": {
+    "exact_text_overlap": 0,
+    "nearest_train_similarity": {
+      "median": 0.405,
+      "p90": 0.692,
+      "max": 0.951,
+      "val_tickets_ge_0.8": 3,
+      "val_tickets_ge_0.6": 14
+    },
+    "nearest_neighbour_label_agreement": 0.641,
+    "most_similar_pairs": [
+      {
+        "similarity": 0.951,
+        "val_label": "Support general",
+        "val_text": "Hi, could you please set up a new Windows account for a new team member? They'll need email access through Exchange, Skype, and the standard file share access that everyone else has.",
+        "nearest_train_label": "Support general",
+        "nearest_train_text": "Hi there, could you please set up a new Windows account for a new team member? They'll need email access through Exchange, Skype, and the standard file share access that everyone else has. Thanks!"
+      },
+      {
+        "similarity": 0.809,
+        "val_label": "Fileservice",
+        "val_text": "Hey, could you grant me read and write access to J:/ÖFZFOX/MOM-OSR? I need to be able to work with the files in that folder. Appreciate it!",
+        "nearest_train_label": "Fileservice",
+        "nearest_train_text": "Hi there, could you please grant me read and write access to J:/ÖFZFOX/MOM-OSR? I need to be able to work with files in that folder. Thanks!"
+      },
+      {
+        "similarity": 0.809,
+        "val_label": "Support general",
+        "val_text": "Hey, could you please create a new Windows user account for someone starting soon? They'll need Exchange email, Skype, and standard file share access set up. Appreciate it!",
+        "nearest_train_label": "Support general",
+        "nearest_train_text": "Hey, could you create a new Windows user account for a new starter? They'll need Exchange email, Skype, and standard file share access set up. Appreciate it!"
+      }
+    ]
+  },
+  "llama_factory_pipeline": {
+    "template": "qwen3",
+    "enable_thinking": true,
+    "num_examples": 468,
+    "sequence_tokens": {
+      "min": 90,
+      "median": 107,
+      "p95": 126,
+      "max": 190
+    },
+    "loss_tokens_per_example": {
+      "min": 7,
+      "max": 10
+    },
+    "example0_prompt_masked": "<|im_start|>system\nYou are an IT helpdesk ticket routing assistant. Given a support ticket, respond with exactly one of the following categories: Support general, Fileservice, O365, EOL, Software, Active Directory, Computer-Services.<|im_end|>\n<|im_start|>user\nSupport Ticket: Hi, could you please create a light external user account for someone outside our organisation? They'll just need email access and basic system access to get started.<|im_end|>\n<|im_start|>assistant\n",
+    "example0_response_trained": "<think>\n\n</think>\n\nSupport general<|im_end|>\n",
+    "hf_prompt_default": "<|im_start|>system\nYou are an IT helpdesk ticket routing assistant. Given a support ticket, respond with exactly one of the following categories: Support general, Fileservice, O365, EOL, Software, Active Directory, Computer-Services.<|im_end|>\n<|im_start|>user\nSupport Ticket: Hi, could you please create a light external user account for someone outside our organisation? They'll just need email access and basic system access to get started.<|im_end|>\n<|im_start|>assistant\n",
+    "hf_prompt_enable_thinking_false": "<|im_start|>system\nYou are an IT helpdesk ticket routing assistant. Given a support ticket, respond with exactly one of the following categories: Support general, Fileservice, O365, EOL, Software, Active Directory, Computer-Services.<|im_end|>\n<|im_start|>user\nSupport Ticket: Hi, could you please create a light external user account for someone outside our organisation? They'll just need email access and basic system access to get started.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+    "check_lf_prompt_equals_hf_default": true,
+    "check_lf_full_starts_with_hf_nothink": true,
+    "think_tokens_are_special": [
+      false,
+      false
+    ],
+    "decoded_response_with_skip_special_tokens": "<think>\n\n</think>\n\nSupport general\n"
+  }
+}
