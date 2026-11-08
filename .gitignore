@@ -1,0 +1,25 @@
+# Python / environments
+.venv/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.DS_Store
+
+# Third-party framework (re-created by setup.sh at a pinned commit)
+LLaMA-Factory/
+
+# Large model artifacts (GitHub's 100 MB file limit)
+models/
+*.bin
+*.pt
+*.pth
+# LoRA adapter weights are allowed explicitly (they are small)
+*.safetensors
+!adapters/**/adapter_model.safetensors
+
+# Training checkpoints (intermediate) and caches
+checkpoint-*/
+optimizer.pt
+wandb/
+runs/
+*.log.tmp

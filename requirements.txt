@@ -1,0 +1,8 @@
+# Extra packages on top of LLaMA-Factory's own dependencies
+# (installed with: uv pip install -e ./LLaMA-Factory -r requirements.txt)
+# Versions below are the ones this project was run with.
+scikit-learn==1.9.1
+seaborn
+jupyter
+ipykernel
+nbconvert
