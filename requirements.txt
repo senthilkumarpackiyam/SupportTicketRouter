@@ -7,3 +7,4 @@ jupyter
 ipykernel
 nbconvert
 playwright==1.64.1      # drives LLaMA Board in a browser (then: playwright install chromium)
+imageio-ffmpeg==0.8.1  # ffmpeg binary for building the demo video (Phase 7)

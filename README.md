@@ -5,7 +5,9 @@
 > of seven resolver queues. Then it is evaluated against the untrained base model on a held-out
 > validation split.
 
-**Status:** 🚧 in progress. See [Project progress](#project-progress).
+**Status:** ✅ complete, all 7 phases. **Result: 24.8 % → 72.6 % accuracy** on 117 held-out tickets.
+
+**▶ Demo video (5 min, narrated):** [`demo/SupportTicketRouter_demo.mp4`](demo/SupportTicketRouter_demo.mp4) · [chapters & how it was made](demo/README.md)
 
 ---
 
@@ -68,7 +70,7 @@ Colab-ready notebook is also included so the run can be repeated on a T4.
 ├── models.nosync/                     # merged 3.4 GB model, local only    (Phase 5, gitignored)
 ├── results/                           # metrics, plots, logs               (Phases 1–6)
 ├── docs/                              # write-ups per phase
-├── demo/                              # narrated demo video                (Phase 7)
+├── demo/                              # narrated demo video + LLaMA Board recordings + builder (Phase 7)
 ├── setup.sh                           # one-shot reproducible setup
 └── requirements.txt
 ```
@@ -82,6 +84,22 @@ cd SupportTicketRouter
                     # installs deps, downloads Qwen3-1.7B-Base, runs scripts/check_env.py
 ```
 
+### Reproduce every phase (from the repo root, `.venv` active)
+
+```bash
+python scripts/prepare_dataset.py && python scripts/data_report.py   # Phase 2
+(cd LLaMA-Factory && GRADIO_SERVER_PORT=7860 llamafactory-cli webui) &   # Phase 3: LLaMA Board
+python scripts/llamaboard_train.py                                     #   fill the Train tab, Start, wait
+python scripts/llamaboard_chat.py                                      #   try the adapter in the Chat tab
+python scripts/phase4_loss_curve.py                                    # Phase 4
+python scripts/phase5_merge_and_smoke.py                               # Phase 5 (baseline, merge, smoke test)
+python scripts/phase6_evaluate.py                                      # Phase 6
+python demo/build/make_demo.py                                         # Phase 7 (macOS)
+```
+
+Or open [`notebooks/SupportTicketRouter_end_to_end.ipynb`](notebooks/SupportTicketRouter_end_to_end.ipynb)
+in Colab: it clones this repo, so it can evaluate the committed adapter without retraining.
+
 Pinned stack: LLaMA-Factory `f6355ab` (v0.9.6.dev0) · PyTorch 2.15.0 · Transformers 5.8.0 ·
 PEFT 0.18.1 · Accelerate 1.11.0 · Gradio 5.50.0 · Python 3.11.
 
@@ -93,9 +111,9 @@ PEFT 0.18.1 · Accelerate 1.11.0 · Gradio 5.50.0 · Python 3.11.
 - [x] **Phase 4: Review training:** loss curve falls 97 % and is flat in epoch 3 → no retrain → [notes](docs/PHASE4_TRAINING_REVIEW.md)
 - [x] **Phase 5: Merge + smoke test:** baseline 24.8 %, adapter merged (verified), course smoke test 4/5 → [notes](docs/PHASE5_MERGE_SMOKE.md)
 - [x] **Phase 6: Evaluate + compare:** 24.8 % → 72.6 % accuracy; report, confusion matrix, comparison, thresholds, latency → [notes](docs/PHASE6_EVALUATION.md)
-- [ ] **Phase 7: Demo video**
+- [x] **Phase 7: Demo video:** 5 min, Indian English narration, real LLaMA Board footage → [video](demo/SupportTicketRouter_demo.mp4) · [notes](demo/README.md)
 
-## Key findings so far
+## Key findings along the way
 
 - **Chat template (Phases 2–3):** for a *Base* model LLaMA Board leaves the template at
   `default` (`System:/Human:/Assistant:`). LLaMA-Factory then rewrites the tokenizer's chat
@@ -103,6 +121,10 @@ PEFT 0.18.1 · Accelerate 1.11.0 · Gradio 5.50.0 · Python 3.11.
   adapter folder**, as the course notebook does. Picking `qwen3` by hand instead would make every
   answer start with an empty `<think></think>` block, and the course's `classify()` would label
   **every** ticket `Support general`. [Details](docs/PHASE2_DATASET.md#which-chat-template-does-llama-board-use-corrected-in-phase-3)
+- **Training on a 16 GB laptop:** 90 steps took 69 min on the M2 GPU, but step time varied from
+  about 33 s to 55 s depending on what else was running (a recording browser, iCloud Drive syncing the
+  project folder, swap). Keep the machine idle and the project out of synced folders.
+  [Details](docs/PHASE3_TRAINING.md#step-time)
 - **Course notebook bug:** `classification_report(..., target_names=LABEL_TOKENS)` is called
   without `labels=`, so sklearn sorts the classes alphabetically and the names are attached to
   the wrong rows (also in the per-class F1 chart). Fixed in this project by passing `labels=`.
