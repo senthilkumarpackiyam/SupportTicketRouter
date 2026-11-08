@@ -1,0 +1,36 @@
+{
+  "logged_points": 18,
+  "starting_loss_step_5": 7.1595,
+  "final_loss_step_90": 0.1907,
+  "total_drop": 6.9688,
+  "drop_pct": 97.3,
+  "mean_train_loss_reported": 0.8842,
+  "per_epoch": {
+    "epoch_1": {
+      "first": 7.1595,
+      "last": 0.2861,
+      "mean": 2.2196
+    },
+    "epoch_2": {
+      "first": 0.2957,
+      "last": 0.1869,
+      "mean": 0.2391
+    },
+    "epoch_3": {
+      "first": 0.209,
+      "last": 0.1907,
+      "mean": 0.1939
+    }
+  },
+  "epoch3_slope_per_10_steps": 0.0019,
+  "epoch3_min_max": [
+    0.1622,
+    0.2212
+  ],
+  "learning_rate_start_end": [
+    4.975670171853926e-05,
+    1.522932452260595e-08
+  ],
+  "course_verdict": "Loss is low \u2014 model has likely converged well.",
+  "validation_loss_available": false
+}
